@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ichinose & Co.</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <!-- 他にメニューがあればここに追加 -->
+            </nav>
+        </header>
+        <main class="contact-card">
+            <h1 class="page-title">Contact</h1>
+            <p class="sub-text">お問い合わせは以下のフォームより承っております。</p>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前 / Name</label>
+                    <input type="text" id="name" name="name" required placeholder="一之瀬 律">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス / Email</label>
+                    <input type="email" id="email" name="email" required placeholder="contact@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">内容 / Message</label>
+                    <textarea id="message" name="message" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                </div>
+
+                <div class="form-group consent-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="privacy-check" required>
+                        <span class="checkmark"></span>
+                        <span class="consent-text">
+                            <a href="privacy-policy.html" target="_blank">プライバシーポリシー</a>に同意する
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" id="submit-btn" class="submit-btn" disabled>送信する</button>
+            </form>
+            
+            <div id="form-status" class="hidden"></div>
+        </main>
+    </div>
+
+    <script>
+        // ★重要: ここにGASで発行したウェブアプリURLを貼り付けてください
+        const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxnCv_RZGlNLN6MYRxo1ggguANBnGof9ctmoQ1drniwXq10N8i3EDyJ7InAMvcYEDHk/exec";
+
+        const privacyCheck = document.getElementById('privacy-check');
+        const submitBtn = document.getElementById('submit-btn');
+        const contactForm = document.getElementById('contact-form');
+        const statusArea = document.getElementById('form-status');
+
+        // 同意チェックの状態に合わせてボタンを制御
+        privacyCheck.addEventListener('change', function() {
+            submitBtn.disabled = !this.checked;
+        });
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            submitBtn.innerText = "送信中...";
+
+            const payload = {
+                name: this.name.value,
+                email: this.email.value,
+                message: this.message.value
+            };
+
+            fetch(GAS_ENDPOINT, {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(data => {
+                statusArea.innerText = "メッセージを送信しました。ありがとうございます。";
+                statusArea.className = "status-success";
+                this.reset();
+                submitBtn.disabled = true;
+            })
+            .catch(err => {
+                statusArea.innerText = "エラーが発生しました。時間をおいて再度お試しください。";
+                statusArea.className = "status-error";
+                submitBtn.disabled = false;
+            })
+            .finally(() => {
+                submitBtn.innerText = "送信する";
+                statusArea.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
