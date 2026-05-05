@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-03"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+
+            <div class="entry-content">
+                <p>最近、ニュースを賑わせている保険会社の顧客データ流出事件。名前を聞けば誰もが知るような大企業で、「またか」と思うほど相次いでいますよね。</p>
+                <p>最新の傾向を調べてみると、実は「外部の天才ハッカーに侵入された」という映画のような話ばかりではありません。むしろ、「身内の隙」――つまり、会社内部の人間による不適切な情報の持ち出しや共有が原因となっているケースが目立っています。</p>
+                <p>「どうして、あれほどの大企業が？」<br>
+                今日はその裏側にある、組織の歪みと、私たちがこれから持つべき「視点」についてお話しします。</p>
+
+                <h2>なぜ「中の人」が、一線を越えてしまうのか？</h2>
+                <p>セキュリティに何十億という予算を投じても、結局それを動かすのは「人」です。なぜ、まじめに働いているはずの社員や出向者が、顧客のデータを不正に扱ってしまうのでしょうか。そこには3つの心理的な「罠」が潜んでいます。</p>
+                <p><b>「正義」に化けたプレッシャー</b><br>
+                営業成績やシェア拡大という強烈なノルマ。彼らにとって、他社の情報を盗むことは「悪いこと」ではなく、「会社に貢献するための手段」にすり替わってしまいます。</p>
+                <p><b>「誰も見ていない」という慣れ</b><br>
+                長年の付き合いがある代理店同士など、性善説に基づいた管理体制が、「自分だけならバレないだろう」という心の隙間を作ります。</p>
+                <p><b>「みんなやっている」という免罪符</b><br>
+                業界の古い慣習として、「これくらいは当たり前」という空気が組織に蔓延していると、個人の罪悪感は麻痺してしまいます。</p>
+                <p>つまり、流出を招いているのはシステム上のバグではなく、組織文化という名のバグなのです。</p>
+
+                <h2>100%防げないからこそ、私たちが向き合うべき現実</h2>
+                <p>「では、どうやって自衛すればいいのか？」</p>
+                <p>よくある「パスワードを複雑にする」「不審なメールを開かない」という対策。もちろん大切ですが、それだけであなたのデータが100%守られる保証はありません。私たちが預けた情報は、その企業のサーバーに入った瞬間、私たちのコントロールを離れてしまうからです。</p>
+                <p>100%防ぐことが不可能な世界で、私たちにできる「究極の自衛」とは何でしょうか。それは、特定のテクニックではなく、「企業を見極める哲学」を持つことかもしれません。</p>
+                <h2>保険の本質を問い直す</h2>
+                <p>保険という商品は、本来「目に見えない未来の安心（信頼）」を買うものです。しかし、その「安心」を売る側が、私たちのプライバシーを軽視しているという矛盾。</p>
+                <p>今回の相次ぐ流出事件を見て、私はこう感じました。</p>
+
+                <div class="highlight-quote">
+                    「万が一」に備えるための保険が、新たな「万が一（流出）」を生んでいるという皮肉。
+                </div>
+                <p>これからの保険選びは、保障内容を見る前にその会社が「あなたのプライバシーをどれだけ重く見ているか」という数字に表れない部分を読み解く力が必要になりそうです。</p>
+                <p>私たちは、保険料の安さやパンフレットの華やかさだけで、大切な情報を差し出していないでしょうか。</p>
+                <p>「預けた瞬間に、自分の手から離れる」という現実を忘れずに、ときには企業に対して「私のデータをどう守っているのか」という厳しい視線を送る。そんなワガママなユーザーでいることこそが、結果として自分を守る最強の盾になるのだと思います。</p>
+                
+                <div class="concept-box">
+                    <strong>皆さんは自分のデータを預けるとき、何を基準に「信頼」を決めていますか？</strong>
+                </div>
+
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="#" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

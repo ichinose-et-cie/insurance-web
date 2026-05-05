@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav><a href="index.html" style="text-decoration: none; color: inherit; font-size: 0.9rem; font-weight: 700;">TOP</a>
+                <a href="blog.html" style="text-decoration: none; color: inherit; font-size: 0.9rem; font-weight: 700;">BLOG</a>
+            </nav>
+        </header>
+
+        <div class="blog-header">
+            <h1>Insights</h1>
+            <p>構造化思考で、保険と日常をデバッグする。</p>
+        </div>
+
+        <main id="blog-list-container">
+            <!-- 記事カードがここに表示される -->
+        </main>
+
+        <!-- ページネーション用のコントロール -->
+        <div id="pagination-controls" class="pagination-container">
+            <!-- ここに「前へ」「次へ」ボタンが生成される -->
+        </div>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- 1. まずマスターデータを読み込む -->
+    <script src="blog-master.js"></script>
+
+    <!-- 2. 次に、データを画面に描画するロジックを書く -->
+    <script>
+        /* 1. 基本設定 */
+        const postsPerPage = 3; // 1ページあたりの記事数
+        let currentPage = 1;    // 現在のページ状態を保持
+
+        // マスターデータ（オブジェクト）を、計算しやすいように「配列」に変換
+        const postsArray = Object.keys(BLOG_POSTS).map(id => BLOG_POSTS[id]);
+
+        /* 2. 描画メイン関数（既存のrenderBlogCardsの進化系） */
+        function renderBlogPage(page) {
+            const container = document.getElementById('blog-list-container');
+            const controls = document.getElementById('pagination-controls');
+            
+            // 表示範囲の計算（スライス処理）
+            const start = (page - 1) * postsPerPage;
+            const end = start + postsPerPage;
+            const currentPosts = postsArray.slice(start, end);
+
+            // 記事カードの生成
+            let html = '';
+            currentPosts.forEach(post => {
+                html += `
+                    <a href="${post.url}" class="post-card">
+                        <span class="date">${post.date}</span>
+                        <span class="card-subtitle">${post.subtitle}</span>
+                        <h2>${post.title}</h2>
+                    </a>
+                `;
+            });
+            container.innerHTML = html;
+
+            // ページネーションボタンの生成
+            renderPaginationControls(page);
+
+            // ページ移動時に上部へ戻る（UX向上のため）
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* 3. ボタン生成サブ関数（ロジックの分離） */
+        function renderPaginationControls(page) {
+            const controls = document.getElementById('pagination-controls');
+            const totalPages = Math.ceil(postsArray.length / postsPerPage);
+
+            // 記事が1ページ分以下なら、ボタンを表示しない（任意）
+            if (totalPages <= 1) {
+                controls.innerHTML = '';
+                return;
+            }
+
+            controls.innerHTML = `
+                <button class="page-btn" onclick="changePage(${page - 1})" ${page === 1 ? 'disabled' : ''}>PREV</button>
+                <span class="page-info">${page} / ${totalPages}</span>
+                <button class="page-btn" onclick="changePage(${page + 1})" ${page === totalPages ? 'disabled' : ''}>NEXT</button>
+            `;
+        }
+
+        /* 4. ページ切り替えイベント */
+        function changePage(newPage) {
+            currentPage = newPage;
+            renderBlogPage(currentPage);
+        }
+
+        /* 5. 初期実行 */
+        window.onload = () => renderBlogPage(currentPage);
+    </script>
+
+</body>
+</html>

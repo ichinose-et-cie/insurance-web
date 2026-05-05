@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-02"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+
+            <div class="entry-content">
+                <p>大手生命保険の営業員が顧客から多額の現金を騙し取ったというニュースが、連日のようにメディアを賑わせています。「信じていたのに裏切られた」という被害者の声を聞くたびに、胸が締め付けられる思いです。</p>
+                <p>同時に、20年以上システムの裏側を作ってきた人間として、私はこう思わざるを得ません。「なぜ、一人の人間にこれほどの『重荷』を背負わせてしまったのか」と。</p>
+
+                <h2>管理体制は、実は「整いすぎている」</h2>
+                <p>多くの人はニュースを見て「保険会社の管理が甘い」と批判します。しかし、現代の保険会社の基幹システムは、驚くほど厳格です。1円単位の不整合も許さず、すべての操作はログに刻まれます。システムそれ自体に、不正が入り込む隙間はほとんどありません。</p>
+                <p>では、なぜこれほどの不祥事が起きるのか。それは、システムが完璧になればなるほど、唯一の「アナログな隙間」である<b>顧客と営業員の間の『対面』というインターフェース</b>に、すべての負荷が集中してしまうからです。</p>
+
+                <h2>「信じてお任せ」という名の脆弱性</h2>
+                <p>営業員が「私に現金を預けてくれれば、特別な運用に回します」と持ちかける。このとき、システム上の正規ルートをスキップする「サイドチャネル（裏道）」が生まれます。</p>
+                <p>ここで考えたいのは、営業員という「人間」の視点です。顧客から「あなたを信じているから、面倒な手続きは抜きにして任せるよ」と言われること。それは営業員にとって最大の喜びであると同時に、実は「自分を監視する仕組みが消えた」という、非常に危うい状態に置かれることを意味します。</p>
+
+                <div class="highlight-quote">
+                    ルールを守ることは、相手を疑うことではありません。<br>
+                    それは、大切な一人に「過ちの責任」を<br>背負わせないための優しさです。
+                </div>
+
+                <h2>ルールは、大切な担当者を「守る」ためのもの</h2>
+                <p>システム設計の世界には「相互監視」という考え方があります。一人が万能な権限を持たないように、必ず別のチェックを通す。これは相手を疑っているからではなく、誰かに「魔が差すリスク」を背負わせないための設計思想です。</p>
+                
+                <div class="concept-box">
+                    <strong>システム設計の格言：Fail-safe（フェイルセーフ）</strong>
+                    人間は必ずミスをしたり、誘惑に負けたりする生き物である、という前提に立ち、たとえ一人が間違った操作をしても、システム全体が致命的な事故に発展しないよう「あらかじめ二重三重の壁を作っておく」考え方のこと。
+                </div>
+
+                <p>顧客として私たちができる最大の誠実さは、担当者を「疑う」ことではありません。「どんなに信頼していても、お金のやり取りは会社の正規ルート以外では行わない」「必ずシステム発行の受領証を確認する」という鉄則を貫くことです。</p>
+                <p>このルールを徹底することは、担当者を誘惑というバグから守り、彼らがプロフェッショナルとして誇り高く働き続けるための、一番の防波堤になるのです。</p>
+
+                <p>「仕組み」という冷徹に見えるルールを正しく運用すること。それが、大切な担当者との信頼関係を、一番温かく、長く守り続けるための「最適解」なのだと私は信じています。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="#" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

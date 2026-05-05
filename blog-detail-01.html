@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog-common.css">
+</head>
+
+<!-- blog-master.js に defer を追加 -->
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-01"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+
+            <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+
+            <div class="entry-content">
+                <p>保険会社の基幹システムを長年設計してきた人間にとって、最近のマイナンバーカードを巡る議論には、世間とは少し違った「見え方」があります。</p>
+                <p>それは、ようやく日本の保険という巨大なシステムが、<strong>「データの正規化（Normalization）」</strong>というスタートラインに立とうとしている、という感覚です。</p>
+
+                <h2>「記憶」という曖昧なデータに頼る限界</h2>
+                <p>ITの世界には「Garbage In, Garbage Out（ゴミを入力すれば、ゴミが出てくる）」という言葉があります。どんなに優れたアルゴリズムを組んでも、入力されるデータが不正確であれば、出力される結果（保障や支払い）もまた、不確かなものにしかなりません。</p>
+                
+                <div class="concept-box">
+                    <strong>エンジニアの視点：</strong><br>
+                    これまでの保険は、この「入力」の部分を、ユーザーの「記憶」や「手入力」という、もっともエラーが起きやすい手段に頼らざるを得ませんでした。
+                </div>
+
+                <p>この「データのゆらぎ」こそが、後の給付金支払い時のトラブルや、複雑すぎる告知審査という「システム上の摩擦」を生む原因になっていました。</p>
+                <p>例えば、手術を終えて退院した後、これまでは「診断書を病院に依頼し 届いた書類を封筒に入れ 保険会社に郵送する」という心身ともに負担のかかる作業が待っていました。不備があれば差し戻し、支払いまで数週間待つことも珍しくありません。<br>
+
+                    もしデータが正規化され病院と保険会社のシステムが共通の鍵で繋がれば、このプロセスは劇的に変わります。
+                    スマホで「請求ボタン」を押すだけで、必要な医療データがセキュアに連携され、早ければその日のうちに給付金が口座に振り込まれる、といった未来が訪れるかもしれません。
+                    「手続きの煩わしさ」というバグが取り除かれ、あなたは療養だけに専念できるようになります。</p>
+
+                <h2>マイナンバーカードは「プライマリキー」になる</h2>
+                <p>「正規化」とは、簡単に言えば「重複や矛盾をなくし、データを最も正しい形に整えること」です。</p>
+                <p>マイナンバーカードとの連携が進むということは、システム的に言えば、一人ひとりの医療データに<strong>「プライマリキー（一意の識別子）」</strong>が割り振られることを意味します。</p>
+
+                <div class="figure-placeholder">
+                    
+                    <br><small>図：共通の「鍵」によってデータが統合されるイメージ</small>
+                </div>
+
+                <p>これまでは「A病院のカルテ」と「B保険会社の契約」を紐付ける共通の鍵がありませんでした。それが一つの鍵で繋がることで、データは「個人の記憶」という曖昧な場所から、「医療機関の記録」という、客観的で検証可能な場所へと移ります。</p>
+                <p>例えば、あなたが旅先で急病に倒れ、意識が朦朧とする中で救急搬送されたとします。これまでは、アレルギーの有無や過去の病歴、現在飲んでいる薬などを、家族や本人の「記憶」に頼って確認するしかありませんでした。<br>
+                しかし、データが正規化された未来では、マイナンバーカード一枚があなたの「正確な分身」になります。医師がカードを読み取るだけで、服用中の薬や過去の検査結果が瞬時に、かつ正確に共有される。
+                「たぶん、あの薬を飲んでいたはず……」という曖昧な記憶によるリスクを、システムが排除してくれるのです。</p>
+
+                <h2>システムが「誠実」であるために</h2>
+                <p>これを「監視」と捉える向きもありますが、エンジニアの視点で見れば、これは<strong>「システムの誠実さ」</strong>を高めるための進化です。</p>
+                <p>データが正規化され、正しい入力が担保されれば、保険会社は「告知漏れがあるかもしれない」というリスクを過剰に見込む必要がなくなります。また、ユーザー側も「自分の申告が間違っていたらどうしよう」という不安から解放されます。</p>
+                <p>例えば数年に一度の保険の見直し。自分の健康診断データが正確に蓄積され、それが保険の設計図とロジカルに結びついたならどうなるでしょうか。「今の生活習慣なら、この保障は過剰」「このデータを見る限り、こちらの特約の方が優先順位が高い」といったアドバイスが、客観的な数値に基づいて提示されるような仕組みができるようになるかもしれません。</p>
+
+                <p>テクノロジーの進化が、保険という古くからの「助け合いの仕組み」を、より透明で、バグのない形へとアップデートしていく。その過渡期に、私たちは今、立ち会っているのだと感じています。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold;">
+                    SHARE: <a href="#" style="margin-left:10px; color:inherit;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

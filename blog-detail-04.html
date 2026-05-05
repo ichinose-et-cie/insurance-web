@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-04"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+
+            <div class="entry-content">
+                <p>最近、SNSや動画プラットフォームを開けば必ずと言っていいほど目に飛び込んでくる言葉があります。「保険はすべて無駄」「保険に入るやつは情弱」といった、いわゆる「保険不要論」です。</p>
+                <p>こうした極端な主張は、アルゴリズムによって拡散されやすく、私たちの目につきやすい「ノイズ」として増幅されています。しかし、システム設計の視点からこれらを眺めると、ある重大なエラーが浮き彫りになります。</p>
+                <p>今回は、この「保険不要論」というノイズをどうデバッグし、自分にとって最適な「実行環境」を構築すべきかについてお話しします。</p>
+
+                <h2>「極端な最適化」という名のバグ</h2>
+                <p>SNSで語られる不要論の多くは、非常にシンプルで論理的に見えます。「確率は低い」「期待値がマイナス」「貯蓄でカバーできる」。</p>
+                <p>これらは一種の「極端な最適化（Extreme Optimization）」です。特定の条件下では正解かもしれませんが、システム全体（＝あなたの人生と家計）の安全性を担保する上では、いくつかの変数が欠落しています。<br>特に無視されがちなのが、「個別の実行環境」です。</p>
+                <p><b>家族構成と依存関係</b><br>
+                独身なのか、幼い子供がいるのか</p>
+                <p><b>キャッシュフローの耐久性</b><br>
+                今すぐ数百万の支出があっても破綻しないか</p>
+                <p><b>リスク許容度というリソース</b><br>
+                万が一の際に精神的なリソースをどれだけ割けるか</p>
+                <p>これらの環境変数を無視して、「一律に不要」と結論づけるのは、本番環境のスペックを確認せずにソースコードをデプロイするような暴論と言わざるを得ません。</p>
+
+                <h2>情報のノイズをフィルタリングする「3つのフィルタ」</h2>
+                <p>溢れかえる情報の中で、私たちはどのようにして自分に必要な「真実」を抽出すべきでしょうか。私は以下の3つのフィルタを通すことをお勧めしています。</p>
+                <p><b>1. 「期待値」ではなく「致命傷」で判断する</b><br>保険の本質は、期待値を追うギャンブルではなく、「発生確率は低いが、起きたらシステムが強制終了（破綻）する事象」への対策です。「損か得か」というフィルタではなく、「そのリスクを自力でハンドリングできるか」というフィルタで見てください。</p>
+                <p><b>2. 送信者の「コンテキスト」を確認する</b><br>不要論を唱える発信者の多くは、すでに十分な資産を持っているか、あるいは特定の金融商品へ誘導する意図を持っている場合があります。彼らの実行環境と、あなたの実行環境は同一でしょうか？ 相手のコンテキスト（背景）を無視してコードをコピー＆ペーストしてはいけません。</p>
+                <p><b>3. 「確率」と「現実」を切り分ける</b><br>「がんになる確率は〇％」という統計データは、集団に対するデバッグには有効ですが、個人の人生においては「0か100か」の二択でしか現れません。統計というマクロな視点と、生活というミクロな視点のログを混同しないことが重要です。</p>
+
+                <h2>自分だけの「最適解」をビルドする</h2>
+                <p>保険は、人生という複雑なシステムを安定稼働させるための、いわば「例外処理（Exception Handling）」です。</p>
+                <p>今SNSのノイズに惑わされて例外処理をすべて削除してしまえば、システムは一時的に軽くなるかもしれません。しかし、予期せぬエラーが発生した瞬間に、そのシステムは回復不能なダメージを受けることになります。</p>
+
+                <p>大切なのは、「みんなが言っているから」ではなく、自分の家計という「実行環境」に合わせたコードを書くこと。複雑すぎる保険商品は確かに整理が必要ですが、すべてを「無駄」と切り捨てる前に、まずは自分の環境変数を正しく定義することから始めてみてください。</p>
+                <p>保険不要論の核心にある問いかけは正当です。「あなたはその保険に、本当に入る必要がありますか？」と問われることで、多くの方が漠然と払い続けていた保険料を見直すきっかけになります。</p>
+                
+                <div class="highlight-quote">
+                    「保険はいらない」でも「保険は絶対必要」でもなく<br>
+                    ——「あなたにとって、今、何が必要か」。<br>そこから考え始めてみてください。
+                </div>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="#" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

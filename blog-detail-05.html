@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-05"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+
+            <div class="entry-content">
+                <p>「保険は不要」「公的保障で十分」「保険会社を儲けさせるだけ」——こうした言葉を、SNSで一度は目にしたことがある方も多いのではないでしょうか。特にYouTubeやXでは、こうした"保険不要論"が大きな反響を呼んでいます。</p>
+                <p>私はこうした議論をとても興味深く見ています。なぜなら、保険不要論の一部は「正しい」からです。しかし同時に、重要な視点が抜け落ちているケースも少なくありません。今回は、SNSに広がる保険不要論を丁寧に読み解きながら、「あなたにとって、保険とは何なのか」を一緒に考えてみたいと思います。</p>
+
+                <h2>保険不要論の「正しい部分」</h2>
+                <p>保険不要論が支持を集める理由は、それが完全な誤りではないからです。日本には、世界的に見ても手厚い公的保障制度があります。健康保険の「高額療養費制度」を使えば、ひと月の医療費負担は収入に応じて上限が設けられており、一般的な収入の方なら月8〜9万円程度に抑えられます。</p>
+                <p>「民間の医療保険に入らなくても、実はそれほど困らない」というのは、多くの場合、事実です。また、貯蓄型保険や外貨建て保険など、保険の形をした”投資商品"の中には、コストが割高なものも存在します。「保険で資産形成」には慎重であるべきという指摘は、的を射ています。</p>
+                <p>保険不要論の核心にある問いかけは正当です。「あなたはその保険に、本当に入る必要がありますか？」と問われることで、多くの方が漠然と払い続けていた保険料を見直すきっかけになります。</p>
+
+                <h2>見落とされがちな「リスクの非対称性」</h2>
+                <p>では、保険はすべて不要なのでしょうか。ここで私が専門家として強調したいのは、「リスクの非対称性」という考え方です。</p>
+                <p>保険の本質は「確率は低いが、発生すると人生を大きく狂わせるリスク」に備えるものです。医療費の自己負担は公的制度でかなり抑えられますが、「長期入院による収入の喪失」「世帯主の死亡による家族の生活費」「働けなくなった場合の就業不能リスク」などは、公的保障だけでは十分にカバーできない場面もあります。</p>
+                <p>特に、住宅ローンを抱えながら子育て中の家庭では、世帯主の死亡や長期療養が家計に与えるインパクトは非常に大きい。そのような「万一が起きたときのダメージが許容できない」状況にある方にとっては、保険は合理的な選択になります。</p>
+
+                <h2>SNSの情報が持つ「一般論の罠」</h2>
+                <p>シSNSで発信される保険不要論の多くは、特定の条件・前提を持った「一般論」です。たとえば「独身・賃貸・貯蓄あり」という状況であれば、確かに民間保険の優先度は低くなるでしょう。しかし「子あり・住宅ローンあり・自営業」という方には、まったく異なる判断が必要です。</p>
+                <p>SNSでは「わかりやすさ」と「バズりやすさ」が優先されます。極端な主張のほうが拡散されやすい構造がある中で、あなた個人の状況に合った答えを得るのは難しい。これは保険不要論を否定しているのではなく、「あなたの答え」は「SNSの答え」とは違うかもしれない、という問いかけです。</p>
+                
+                <div class="concept-box">
+                    <strong>自分に問いかけてみましょう</strong>
+                    万一のことが起きたとき、現在の貯蓄で家族の生活は何年分まかなえますか？<br>公的保障（遺族年金・傷病手当金など）をどの程度、具体的に把握していますか？<br>その保険に入っている理由を、自分の言葉で説明できますか？
+                </div>
+
+                <h2>「不要かどうか」より「必要なものを選んでいるか」</h2>
+                <p>保険不要論が提起する本当の問いは、「保険そのものが不要か」ではなく、「あなたが今入っている保険は、あなたに本当に必要なものか」ではないでしょうか。</p>
+                <p>不必要な保険を解約する勇気も必要です。一方で、必要なリスクに対して無防備でいることも、賢明とは言えません。大切なのは、どちらの極論にも流されず、自分の生活・家族・収入・リスク許容度を踏まえて判断することです。</p>
+                <p>SNSの議論は、保険を「見直すきっかけ」としては非常に有益です。ただ、最終的な判断はあなた自身の状況を丁寧に整理した上で行うことをお勧めします。必要であれば、中立的な立場のファイナンシャルプランナーに相談することも、一つの選択肢です。</p>
+
+                <div class="highlight-quote">
+                    「保険はいらない」でも「保険は絶対必要」でもなく<br>
+                    ——「あなたにとって、今、何が必要か」。<br>そこから考え始めてみてください。
+                </div>
+
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="#" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
