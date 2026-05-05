@@ -1,0 +1,151 @@
+@charset "utf-8";
+        :root {
+            --bg-color: #EFEBE9;
+            --text-color: #433422;
+            --accent-color: #D4A373;
+            --card-bg: #FFFFFF;
+            --font-main: 'Zen Maru Gothic', sans-serif;
+            --font-accent: 'Cormorant Garamond', serif;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            font-family: var(--font-main);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 25px; }
+        section { padding: 80px 0; }
+
+        /* --- Header --- */
+        header { padding: 40px 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.1em; }
+        nav a { text-decoration: none; color: var(--text-color); margin-left: 30px; font-size: 0.9rem; font-weight: 700; }
+
+        /* --- Hero --- */
+        .hero { text-align: center; padding-top: 80px; padding-bottom: 40px; }
+        .hero .eng { font-family: var(--font-accent); font-size: 1.8rem; font-style: italic; color: var(--accent-color); }
+        .hero h1 { font-size: 2.8rem; margin: 10px 0; line-height: 1.4; }
+
+          /* Heroセクションの微調整 */
+        .hero h1 {
+            font-size: 2.6rem; /* 少しだけ小さくして、一行の読みやすさを確保 */
+            margin: 20px 0;
+            letter-spacing: 0.05em;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* モバイル対応：スマホで文字が大きすぎるのを防ぐ */
+        @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 1.6rem;
+            padding: 0 10px;
+            }
+        .hero p {
+            font-size: 0.9rem;
+            }
+        }
+
+        /* --- Featured Book (Hero Image) --- */
+        .featured-book { text-align: center; margin-bottom: 100px; }
+        .book-img-wrapper {
+            display: inline-block;
+            width: 320px; /* 必要に応じて調整 */
+            height: 450px;
+            background: #ccc; /* 画像がない時のプレースホルダー */
+            border-radius: 5px 15px 15px 5px;
+            box-shadow: 30px 30px 60px rgba(67, 52, 34, 0.15);
+            position: relative;
+            transition: transform 0.4s ease;
+        }
+        .book-img-wrapper:hover { transform: scale(1.02); }
+        .book-img-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+
+        /* --- News Section --- */
+        .news-container { background: var(--card-bg); border-radius: 40px; padding: 60px; }
+        .news-list { list-style: none; padding: 0; margin: 0; }
+        .news-item {
+            display: flex; border-bottom: 1px solid #eee; padding: 20px 0;
+            transition: opacity 0.3s; text-decoration: none; color: inherit;
+        }
+        .news-item:hover { opacity: 0.7; }
+        .news-date { width: 150px; font-weight: 700; color: var(--accent-color); }
+        .news-title { flex: 1; }
+
+        /* --- Card System --- */
+        .section-title { font-family: var(--font-accent); font-size: 2.5rem; font-style: italic; text-align: center; margin-bottom: 60px; }
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .card { background: var(--card-bg); padding: 50px; border-radius: 40px; box-shadow: 0 15px 35px rgba(67, 52, 34, 0.04); }
+        .book-label { display: inline-block; background: var(--accent-color); color: white; padding: 2px 15px; border-radius: 20px; font-size: 0.75rem; margin-bottom: 20px; }
+        .btn { display: inline-block; margin-top: 25px; padding: 12px 30px; border: 1px solid var(--accent-color); color: var(--accent-color); text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.3s; }
+        .btn:hover { background: var(--accent-color); color: white; }
+
+        /* --- Blog Card Specific Styles (調整版) --- */
+        .card.blog-card {
+            background: var(--accent-color); /* #D4A373 */
+            box-shadow: 0 15px 35px rgba(212, 163, 115, 0.2);
+            color: #FFFFFF; /* 基本は白 */
+        }
+
+        .card.blog-card .news-date {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .card.blog-card h3 {
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        /* 説明文（pタグ）だけを濃い茶色に変更して引き締める */
+        .card.blog-card p {
+            color: var(--text-color); /* #433422 (黒に近い濃い茶色) */
+            font-weight: 500; /* 文字色を濃くした分、少しだけ太くすると読みやすいです */
+            opacity: 0.9;
+        }
+
+        .card.blog-card .btn {
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+        }
+
+        .card.blog-card .btn:hover {
+            background: #FFFFFF;
+            color: var(--accent-color);
+        }
+
+        /* --- About --- */
+        .about-content { background: var(--card-bg); padding: 80px; border-radius: 40px; display: flex; gap: 60px; align-items: center; }
+        .about-text { flex: 2; }
+        .about-image { width: 200px; height: 200px; background: var(--bg-color); border-radius: 50%; object-fit: cover; }
+
+        .contact {
+            justify-content: center;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* --- Social & Footer --- */
+        .social-links { text-align: center; padding: 40px 0; }
+        .social-links a {
+            display: inline-block; margin: 0 15px; text-decoration: none; color: var(--text-color);
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-links a:hover { transform: translateY(-3px); color: var(--accent-color); }
+        .social-icon { width: 30px; height: 30px; fill: currentColor; }
+        
+        footer { text-align: center; padding: 40px 0; font-size: 0.8rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .about-content { flex-direction: column; padding: 40px; }
+            .news-item { flex-direction: column; }
+            .news-date { margin-bottom: 5px; }
+        }

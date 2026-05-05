@@ -1,0 +1,168 @@
+/* --- Variables & Base --- */
+:root {
+    --bg-color: #EFEBE9;
+    --text-color: #433422;
+    --accent-color: #D4A373;
+    --card-bg: #FFFFFF;
+    --font-main: 'Zen Maru Gothic', sans-serif;
+    --font-accent: 'Cormorant Garamond', serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: var(--font-main);
+    line-height: 2.1; /* 読みやすさ重視の広め設定 */
+}
+
+.container { max-width: 850px; margin: 0 auto; padding: 0 25px; }
+
+/* --- Header & Navigation --- */
+header { 
+    padding: 40px 0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; }
+.logo a { 
+    text-decoration: none; 
+    color: inherit; 
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    letter-spacing: 0.1em; }
+nav a { 
+    text-decoration: none; 
+    color: inherit; 
+    font-size: 0.8rem; 
+    font-weight: 700; 
+    margin-left: 20px; }
+
+/* --- Article Layout --- */
+article {
+    background: var(--card-bg);
+    padding: 80px 60px;
+    border-radius: 40px;
+    margin-top: 40px;
+    box-shadow: 0 15px 35px rgba(67, 52, 34, 0.04);
+}
+
+/* --- 記事ヘッダー全体の調整 --- */
+.entry-header {
+    margin-bottom: 40px; /* 【修正】60pxから40px（約3分の2）に縮小 */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    align-items: center;    /* 中央揃え */
+}
+
+/* --- 日付の調整 --- */
+.entry-date {
+    display: block;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 15px;    /* タイトルとの間隔 */
+    text-align: center;     /* 中央寄せを確実にする */
+}
+
+/* --- タイトルの調整 --- */
+.entry-title {
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0 auto 10px;    /* 上下左右の余白を整理 */
+}
+
+/* --- サブタイトルの調整 --- */
+.entry-subtitle {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-top: 0;          /* タイトル側のmargin-bottomで制御 */
+    margin-bottom: 0;       /* 下の余白は.entry-headerのmarginで制御 */
+    font-weight: 500;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* --- Typography in Content --- */
+.entry-content h2 {
+    font-size: 1.6rem;
+    margin: 60px 0 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bg-color);
+    position: relative;
+}
+.entry-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 60px; height: 2px;
+    background: var(--accent-color);
+}
+
+.entry-content p { margin-bottom: 30px; font-size: 1.05rem; }
+
+/* --- UI Components (共通パーツ) --- */
+
+/* 技術用語解説ボックス */
+.concept-box {
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px 0;
+    font-size: 0.95rem;
+    border: 1px solid rgba(212, 163, 115, 0.2);
+}
+.concept-box strong { color: var(--accent-color); display: block; margin-bottom: 8px; font-size: 1.1rem; }
+
+/* 詐欺事件記事で追加した「強調引用」 */
+.highlight-quote {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: center;
+    margin: 60px 0;
+    padding: 40px;
+    border-top: 1px solid var(--bg-color);
+    border-bottom: 1px solid var(--bg-color);
+    line-height: 1.8;
+}
+
+/* 図解・画像用プレースホルダー */
+.figure-placeholder {
+    background: #f9f9f9;
+    border: 1px dashed #ccc;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #999;
+    margin: 40px 0;
+}
+
+/* --- Footer Area --- */
+.article-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.back-link { text-decoration: none; color: var(--accent-color); font-weight: 700; }
+
+footer.site-footer { text-align: center; padding: 80px 0; font-size: 0.8rem; opacity: 0.6; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    article { padding: 40px 25px; }
+    .entry-title { font-size: 1.6rem; }
+    .highlight-quote { font-size: 1.1rem; padding: 30px 10px; }
+}
+
+
+
