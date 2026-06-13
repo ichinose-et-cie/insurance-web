@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-08"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>「生命保険の見直し、そろそろしなきゃ」と思いながらも、平日の夜や貴重な週末を潰してFPや営業員と何時間も面談する……。そんなプロセスに、正直なところ「ちょっと面倒だな」と感じたことはありませんか？</p>
+                <p>20年以上、システムの裏側を作ってきた人間として、生保業界のシステム構造を眺めていると、一つの構造的な特徴に気づきます。それは、保険会社がどれほど多様なプランを用意しても、顧客がそれにアクセスするための「窓口」が狭く、重すぎるのです。</p>
+
+                <h2>「探して選ぶ保険」から「気づけばそこにある保険」へ</h2>
+                <p>そんな重厚長大な手続きの常識をいま、テクノロジーが根底から覆そうとしています。それが<b>「組み込み型保険（エンベデッド・インシュアランス）」</b>という潮流です。</p>
+                <p>これは、私たちが日常的に使っているデジタルサービスの裏側に、生命保険の機能をパーツとして埋め込んでしまう仕組みです。わざわざ「保険会社のドア」を叩く必要はありません。ネット銀行で住宅ローンの手続きをしているとき、あるいは健康管理アプリで毎日の歩数を記録しているとき、その動線上で「一瞬」にして最適な保障が組み込まれます。</p>
+
+                <div class="concept-box">
+                    <strong>組み込み型保険（Embedded Insurance）とは</strong>
+                    保険会社以外の事業者が提供するWebサービスやアプリの購入・利用動線の中に、API（システム連携の仕組み）を通じて保険加入の手続きをシームレスに埋め込む手法のこと。ユーザーは「保険に入っている」という強い意識を持たずに、自然な流れでリスクに備えることができる。
+                </div>
+
+                <h2>若者の「生保離れ」に見る、設計上のミスマッチ</h2>
+                <p>近年、メディアなどでも「若者の生保離れ」がよく指摘されています。しかし、システムの視点から見れば、これは若者の意識の問題というよりも、単なる<b>「UI（ユーザーインターフェース）のミスマッチ」</b>のように思えます。スマホ一つで数秒で買い物が完結する時代に、何枚もの書類にサインを求める仕組みが置いていかれるのは当然の帰結でした。</p>
+                <p>組み込み型保険は、このミスマッチを技術で埋めていきます。例えば、ギグワーカー向けの配達員用アプリ。稼働して配達している「その時間だけ」、死亡・ケガの保障が数十円で自動適用され、報酬から天引きされる。ここには、従来の「特約」や「特約の解約」といった複雑な概念は一切存在しません。ユーザーのライフスタイルという動的なデータに、保障が完全に1対1で同期しているのです。</p>
+
+                <div class="highlight-quote">
+                    テクノロジーが目指すべきは、人を無理に動かすことではありません。<br>
+                    人が自然に生きているその軌跡の中に、<br>そっと「安心のインフラ」を敷いておくことです。
+                </div>
+
+                <h2>「目に見えない」インフラがもたらす変化</h2>
+                <p>システム設計の世界には「透明性（Transparency）」という言葉があります。ユーザーがシステムの存在や複雑な処理を意識することなく、恩恵だけを受け取れている状態が「優れた設計」とされます。</p>
+                <p>これまでの生命保険は、分厚い約款や熱心なセールストークなど、あまりにもユーザーにその存在を強く意識させるものでした。それは裏を返せば、ユーザーに相応の手間や認知的なコストを求めていたとも言えます。</p>
+                <p>しかし、組み込み型保険が実現する未来は違います。日常のサービスに溶け込み、黒子に徹する。私たちが「守られていることすら意識しない」ほど自然に溶け込んだとき、保険は単なる『商品』から、真の『社会インフラ』へと変わっていくのかもしれません。私たちは今、そんな大きな転換期を目撃しているのではないでしょうか。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

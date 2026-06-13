@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-09"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>前回の記事では、日本の生命保険業界が抱える「対面」というアナログなインターフェースの脆さ（脆弱性）についてお話ししました。人間関係に依存するシステムは、どうしても「魔が差す」というバグを排除しきれません。</p>
+                <p>では、その対極にあるシステムとは何か。今、海の向こうの米国で、若者たちを中心に爆発的な支持を集めているインシュアテック（保険×テック）企業、「Amplify Life」の動きが、その一つの答えを提示しています。</p>
+                <p>彼らがやっているのは、一言で言えば「若者がスマホアプリで生命保険を買い、資産運用する」という仕組み。ここには、システム屋の視点から見ても非常に興味深い、ドラスティックな思想の転換があります。</p>
+
+                <h2>「情緒」を削ぎ落とした、10分間のチェックアウト</h2>
+                <p>米国で話題のこのサービスは、従来の生命保険のイメージを覆します。スーツを着た営業員との面談も、分厚い紙の書類も、病院での健康診断もありません。ユーザーはスマホアプリを開き、AIの質問にいくつか答えるだけ。最短10分で審査が完了し、契約が有効化されます。</p>
+                <p>彼らが購入しているのは、株価指数に連動して資産が増える「ユニバーサル生命保険」という少し複雑な商品ですが、アプリのUI（画面）は驚くほど直感的にデザインされています。「毎月の積立額をいくらにすれば、将来いくら非課税で引き出せるか」が、ゲームのパラメータをいじるように視覚化されているのです。</p>
+                <p>これは単なる「手続きの効率化」ではありません。日本の保険が大切にしてきた<b>「人と人との絆」や「情緒」といったノイズを徹底的に排除し、純粋な『デジタル・インターフェース』へと置き換える思想</b>そのものです。</p>
+
+                <div class="highlight-quote">
+                    テクノロジーがもたらす最大の救いは、効率化ではありません。<br>
+                    人間関係の「しがらみ」や「脆さ」から、<br>個人の資産と決断を完全に切り離すことです。
+                </div>
+
+                <h2>属人性を排除した「バグのない関係」</h2>
+                <p>システム設計において、人間の介在を減らすことは、そのままエラーレート（エラーの発生率）の低下を意味します。Amplifyのようなプラットフォームでは、営業員が嘘をつくことも、顧客の現金を着服することも物理的に不可能です。すべてはコードによって管理され、ログに刻まれるからです。</p>
+                <p>日本の「あなたを信じてお任せする」という美しい文化は、裏を返せば、トラブルが起きたときに個人がすべての泥をかぶる「自己責任型」の脆さを孕んでいました。それに対して米国の仕組みは、最初から人間を信用せず、システムという冷徹な「型」にすべてを委ねることで、結果的にユーザーの資産を安全に守るという構造を作っています。</p>
+
+                <div class="concept-box">
+                    <strong>システム設計の思想：Zero Trust（ゼロトラスト）</strong>
+                    「何も信頼しない」を前提とするセキュリティ思想のこと。ネットワークの内部と外部を区別せず、すべてのアクセスを疑い、毎回正当性を検証する。これを金融の顧客体験に当てはめると、「担当者の善意」に頼らず、すべての取引を厳格なシステムロジックだけで完結させるアプローチとなる。
+                </div>
+
+                <p>しかし、この完璧に見えるデジタルシフトにも、システム屋として一抹の懸念は残ります。それは、新たな「デジタル格差」の誕生です。</p>
+                <p>スマホ一台でスマートに資産を最適化できる若者がいる一方で、この高度なデジタル・インターフェースについていけない人々は、仕組みの恩恵から完全に振り落とされてしまう。すべてをデジタルに委ねるということは、システムの言語を理解できない人々を「サポートなしの荒野」に置き去りにすることでもあるのです。</p>
+
+                <h2>私たちは、どちらのシステムを選択するのか</h2>
+                <p>日本にこれと全く同じ仕組みが明日やってくるわけではありません。日本の厳格な法規制や税制の壁は厚く、何より「顔の見える担当者から買いたい」という情緒的なニーズは根強く残っています。</p>
+                <p>ですが、私たちが考えなければならないのは、特定のサービスが日本に来るかどうかではなく、「自分はどちらのシステムに命の次に大事なお金を委ねたいか」というスタンスの選択です。</p>
+                <p>温かみはあるけれど、人間の脆さを内包した「人対人」のシステムか。それとも、冷徹で容赦はないけれど、1円の不正も許さない「コードとAI」のシステムか。</p>
+                <p>デジタルがもたらす平穏と、その裏にある冷たさ。その両方を見つめながら、私たちは自分自身の「金融のインターフェース」を、そろそろアップデートしていく時期に来ているのかもしれません。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
