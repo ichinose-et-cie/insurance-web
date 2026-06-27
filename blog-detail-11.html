@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-11"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>前回の記事では、金融庁の『AIディスカッションペーパー』を羅針盤に、これからの生命保険システムにはAIを安全にコントロールするための「進化したブレーキ（ガードレール）」が必要不可欠である、というお話をしました。</p>
+                <p>「攻めのDX」と「守りのガバナンス」を両立させるこの設計思想は、多くの開発現場で共通認識となりつつあります。しかし、システムの裏側をさらに一歩踏み込んで覗いてみると、どんなに精緻なブレーキを作っても、ある「大前提」が抜けていればシステムは一瞬で崩壊するという冷徹な事実に突き当たります。それが、エンジニアなら誰もが知る不変の鉄則、<b>「Garbage in, Garbage out（ゴミを入れれば、ゴミが出てくる）」</b>です。</p>
+
+                <h2>AIの運命を左右する「インプット」の濁り</h2>
+                <p>コンピュータサイエンスの世界で長年語り継がれるこの格言は、AI時代においてさらにその重みを増しています。どれほど数億円の予算を投じて最先端の生成AIや予測モデルを組み込み、完璧なガードレールを敷いたとしても、そこに流し込むデータそのものが不完全であれば、AIが導き出すアウトプットもまた、不正確で使い物にならない「ゴミ」になってしまうという意味です。</p>
+                <p>そして、生命保険のバックオフィスという領域は、実はAIにとって最も扱いづらい「濁ったデータ」の宝庫でもあります。数十年前に手書きで書かれた診断書のスキャンデータ、古いシステムごとにフォーマットが異なる過去の契約履歴、あるいは表記の揺れや未入力項目……。「人の一生」という長い時間を引き受けるビジネスだからこそ、データのレガシー化と複雑さは他業界の比ではありません。このデータの濁りこそが、進化したブレーキを狂わせる最大の要因なのです。</p>
+
+                <div class="concept-box">
+                    <strong>Garbage in, Garbage out（GIGO）とは</strong>
+                    「不適切なデータを入力すれば、不適切な結果しか得られない」というシステム設計における基本原則。AIの処理能力（アルゴリズム）ばかりが注目されがちな現代だからこそ、その前提となる「入力データの品質」がシステムの信頼性とガバナンスの成否を10割決める。
+                </div>
+
+                <h2>金融庁が求める「説明責任」や「公平性」の正体</h2>
+                <p>金融庁のペーパーでも厳しく問われている、AIの「ブラックボックス問題（なぜその判定になったか説明できない）」や「バイアス（特定の属性への不当な差別）」。これらは一見すると、AIのアルゴリズムが未熟だから起きる問題のように思えます。しかし実際は、<b>「過去の偏ったデータや不完全なデータをそのままAIに食わせた（Garbage in）」</b>結果であることがほとんどです。</p>
+                <p>AIは入力されたデータの特徴を忠実に学習します。もし過去のデータに人間の無意識の偏見や、古い医療リスクの常識が混ざっていれば、AIはそれを「正解」として扱い、不当な保険料算出や加入拒否を平然と出力してしまいます。つまり、どれほどAIに「公平に判断せよ」とガバナンスの網をかけても、インプットが濁っていれば、出力される信頼性はゼロになってしまうのです。</p>
+
+                <div class="highlight-quote">
+                    ガバナンスの成否は、AIの賢さでは決まりません。<br>
+                    AIに「何を学ばせるか」という、<br>人間のインプットに対する誠実さによってのみ決まります。
+                </div>
+
+                <h2>「華やかなAI」を裏で支える、地味なデータ基盤を褒めよ</h2>
+                <p>では、私たちはどうすればこの難所を越えられるのでしょうか。その答えは、フロントに立つ華やかなAIチャットボットや自動審査ツールそのものではなく、その裏側でデータを綺麗に整える「データクレンジング」や「データパイプライン設計」にあります。</p>
+                <p>バラバラな医療データをAIが正しく認識できる標準フォーマットに変換し、表記揺れを補正し、偏ったバイアスをあらかじめ取り除く――。この地味で泥臭い『データの関所』をシステム内に構築することこそが、結果として金融庁の求める説明責任を果たし、ハルシネーション（嘘）を防ぐ最も確実なガードレールになります。</p>
+                <p>入り口（In）をどこまでも美しく、誠実に磨き上げること。それなしに、安心できる出口（Out）は存在しません。派手なAIトレンドの裏側で、このデータ整備に血を流しているエンジニアの設計思想の中にこそ、AI時代の生命保険が守るべき「真の信頼性」が宿っているのだと私は確信しています。</p>
+            </div>
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

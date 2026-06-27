@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-10"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>「AIが自動で保険金を振り込んでくれた」「AIチャットボットが24時間プラン相談に乗ってくれた」――。生命保険業界でも、生成AIや機械学習を活用した「爆速化」のニュースを頻繁に目にするようになりました。</p>
+                <p>20年以上、システムの裏側を作ってきた人間として、このスピード感には目を見張るものがあります。しかし同時に、システムの設計者であれば誰もが心のどこかで冷や汗をかいているはずです。「もしこのAIが、一線を越えてしまったらどうするのか」と。</p>
+
+                <h2>金融庁の「AIを使わないリスク」という強いメッセージ</h2>
+                <p>金融や生命保険といったガバナンスに厳しい世界において、AIの導入には常に慎重論がつきまといます。そんな中、業界の裏側でいま最も注目されているバイブルがあります。金融庁が公表している<b>『AIディスカッションペーパー（金融分野におけるAIの健全な利活用の促進に向けた初期的な論点整理）』</b>です。</p>
+                <p>この文書の何が興味深いかというと、お堅いイメージのある金融庁が「AIのリスク」を警告するだけでなく、「AIを活用しないことで、顧客に良質なサービスを提供できなくなること自体もリスクである」と、明確に言及している点です。つまり、技術への挑戦を止めるな、と国が強烈に背中を押しているのです。</p>
+
+                <div class="concept-box">
+                    <strong>金融庁「AIディスカッションペーパー」とは</strong>
+                    金融分野におけるAIの健全な利活用とガバナンス（統治）のあり方について、金融庁が提示した議論の枠組みのこと。技術の進歩に合わせて随時更新されており、利便性の向上（攻め）と、リスク管理（守り）のバランスをどう取るべきかの指針となっている。
+                </div>
+
+                <h2>生命保険のシステムが直面する、3つの「重大な問い」</h2>
+                <p>しかし、生命保険が扱うのは「人の命や健康、一生涯のお金」です。ECサイトのレコメンドAIが間違った商品を勧めるのとは、訳が違います。現在、生保のシステム設計において、AIの実装は以下のような極めてシビアなミスマッチと戦っています。</p>
+                <p>第一に<b>「ブラックボックス問題」</b>です。AIが高度なアルゴリズムで「この顧客は不担保（加入拒否）」と判定した際、その理由を人間がロジカルに説明できなければなりません。「AIがそう言っているから」では、顧客に対する説明責任を果たせないのです。第二に、AIがもっともらしい嘘をつく<b>「ハルシネーション」</b>への対策。そして第三に、過去の偏ったデータからAIが特定の属性に対して不当な保険料を算出してしまう<b>「バイアス（差別）」</b>の排除です。</p>
+
+                <div class="highlight-quote">
+                    イノベーションを止めることは、安全を意味しません。<br>
+                    真のガバナンスとは、ブレーキを踏み続けることではなく、<br>最高速で安全に走るための「進化したブレーキ」を作ることです。
+                </div>
+
+                <h2>「攻めのDX」と「守りのガバナンス」の最適解</h2>
+                <p>システム設計の世界には「ガードレール」という考え方があります。開発者が自由にコードを書き、システムが柔軟に動ける自由度を担保しつつも、致命的なエリアには絶対に侵入できないよう、あらかじめ自動化された検証の壁を作っておく設計思想です。</p>
+                <p>これからの生命保険業界におけるAI活用も、まさにこのガードレールの質が問われています。AIの暴走を恐れて古い書類手続きにしがみつくのでもなく、かといって検証なしに最新技術へ飛びつくのでもない。</p>
+                <p>金融庁が示す指針を羅針盤にしながら、テクノロジーの恩恵を最大限に引き出しつつ、人間の手で最後の信頼性を担保する。この「攻め」と「守り」の高次元なバランスの中にこそ、私たちがこれから安心して恩恵を受けられる、次世代の生命保険システムの姿があるのだと私は考えています。</p>
+            </div>
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
