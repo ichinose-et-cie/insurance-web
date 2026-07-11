@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-12"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>これまでの記事では、「生命保険業界＋テクノロジー」を軸に、生成AIのガバナンスやデータ基盤の重要性といったシステムの内側についてお話ししてきました。しかし、視点を「ファイナンシャルプランニング（FP）」という生活者目線の羅針盤へ移したとき、今まさに現場で最も激しい地殻変動が起きているテーマがあります。それが、国主導の資産運用ブームに伴う<b>「生命保険の貯蓄機能からの卒業」</b>です。</p>
+                <p>新NISAやiDeCoの圧倒的な普及により、かつて主流だった「保障を兼ねた積立」「終身保険での教育資金準備」というアプローチは、合理性の観点から見直しを迫られています。しかし、単に『保険は不要、これからはNISA一本でいい』という極論に飛びつくと、人生の最終盤である「出口」において、思わぬ落とし穴に突き当たることになります。令和の家計における、新・生命保険設計の思想を紐解きます。</p>
+
+                <h2>「増やすのは投資、守るのは保険」という最適解</h2>
+                <p>結論から申し上げれば、資産形成の効率において、生命保険が新NISAの税制優遇やインデックス投資の期待リターンに勝つことは不可能です。保険会社が間に入ることで発生する手数料（責任準備金や新契約費など）の構造を考えれば、「お金を増やす」という目的に対して貯蓄型保険を選ぶ合理性は、現在の市場環境においてはほぼ消失したと言ってよいでしょう。</p>
+                <p>これからの時代に提示すべき王道の設計は、<b>「増やす機能は新NISAへ完全に集約し、保険は『万が一』の際の巨大なリスクをカバーする掛け捨て（保障専用）に特化させる」</b>という明確な役割分担です。貯蓄型保険に回していた余剰資金を、新NISAでの長期・積立・分散投資に振り向け、保障は必要があれば安価な収入保障保険などでシンプルに組む。この「分離設計」こそが、現役世代のキャッシュフローを最大化する最も誠実な最適解です。</p>
+
+                <div class="concept-box">
+                    <strong>資産形成における「分離設計」の原則</strong>
+                    「増やす（投資）」と「守る（保障）」という異なる目的の金融機能を、一つの商品に混在させないという設計思想。新NISAの登場によって投資のコストが極限まで下がった現代だからこそ、保険を掛け捨てに絞ることで浮いた資金を投資へ全振りすることが、長期的には最も合理的な資産最大化につながる。
+                </div>
+
+                <h2>新NISAには存在しない、生命保険だけの「出口の魔力」</h2>
+                <p>では、貯蓄型保険や終身保険は完全に過去の遺物となったのでしょうか。現役世代が「資産を拡大する」フェーズにおいては新NISAが圧倒的に有利ですが、増えた資産を次の世代へ引き継ぐ<b>「相続・贈与」という出口のフェーズに立った瞬間、生命保険は新NISAには絶対に真似できない強力な武器</b>へと変貌します。</p>
+                <p>新NISA口座でどんなに数千万円の資産を築き上げたとしても、本人が亡くなった瞬間にその口座は凍結され、遺産分割協議が調うまで家族は1円も引き出すことができません。さらに、その全額が相続税の課税対象となります。一方で、生命保険金は「500万円 × 法定相続人数」の非課税枠が認められているだけでなく、受取人に指定された人が『固有の財産』として、手続き後すぐに現金で受け取ることができます。この差は、残された家族の生活を守る上で決定的な違いとなります。</p>
+
+                <div class="highlight-quote">
+                    現役時代の「増やす競争」は新NISAの圧勝ですが、<br>
+                    人生の最終盤で家族に「確実に遺す」戦略において、<br>
+                    生命保険は有効な金融商品です。
+                </div>
+
+                <h2>新NISAの枠を使い切った先にある、ハイブリッドな人生設計</h2>
+                <p>私たちはこの変化をどう捉え、ライフプランに組み込むべきでしょうか。それは、「投資か保険か」という二元論ではなく、<b>「時間軸に沿ったハイブリッドな使い分け」</b>です。資産形成の初期・中期段階では、新NISAの生涯投資枠（1,800万円）を最優先で埋めることに集中すべきです。ここでは保険の積極的な積立は必要ありません。</p>
+                <p>しかし、投資枠を使い切り、さらに年齢を重ねて「資産の守り方」や「次世代への承継」を意識するステージに達したとき、一時払終身保険などを活用した『非課税枠の枠取り』や『納税資金の確保』が俄然輝きを放ちます。あるいは、親から子への生前贈与の資金受け皿として生命保険を活用するスキームも、現代の税制において依然として有効な防衛策です。</p>
+                <p>入り口（資産形成）を新NISAで効率的に広げること。そして、出口（資産承継）の手前で生命保険という「確実な着地盤」を敷いておくこと。この二つの制度を最適にブレンドする設計思想もまた、有力なアプローチ（選択肢）の一つになるのではないでしょうか。</p>
+            </div>
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
