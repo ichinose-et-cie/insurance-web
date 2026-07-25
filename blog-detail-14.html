@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-14"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>これまでの記事では、新NISAの普及に伴う「投資と保険の分離設計」や、人生の終盤における「相続税対策としての生命保険の活用」についてお話ししてきました。主に家族を持つ世帯をベースにしたライフプランニングの視点でしたが、現代において全く異なる角度から「お金の出口」に向き合わなければならない層がいます。それが、独身・子どもなし、いわゆる<b>「おひとりさま」の世帯</b>です。</p>
+                <p>一般的なマネー誌では、「守るべき家族がいない独身なら、死亡保険は1円もいらない。医療保険だけで十分」というアドバイスが定型文のように語られがちです。確かに、誰かの生活費を保障するための死亡保険は不要かもしれません。しかし、新NISAなどの普及によって若いうちから数千万円規模の資産を築くおひとりさまが増えている2026年現在、私たちはもう一つの冷徹な法的な壁に突き当たることになります。それが、<b>「自分が人生を閉じた後、その資産はどこへ行くのか」</b>という問題です。</p>
+
+                <h2>誰も教えてくれない、おひとりさまの資産が迎える「国庫帰属」という結末</h2>
+                <p>結論から申し上げれば、親や兄弟姉妹もおらず、あるいはすでに他界している独身の方が、遺言書を遺さずに亡くなった場合、新NISA口座や銀行口座にどれだけ血のにじむような努力で数千万円の資産を築き上げていたとしても、その遺産は最終的にすべて<b>「国庫（国のもの）」</b>に没収されることになります。これが「国庫帰属」と呼ばれる法律上の現実です。</p>
+                <p>「せっかく頑張って貯めた大切な資産だから、国に自動的に没収されるくらいなら、長年お世話になった友人や、自分が応援したい社会貢献団体、あるいは母校の大学などに役立ててほしい」と考えるのは、非常に自然で豊かな思想です。しかし、いざ現金を特定の場所に遺そうとすると、厳格な遺言書の作成が必要であったり、死後の手続きを行う遺言執行者の手配が必要だったりと、法的なハードルが極めて高いのが実情です。</p>
+
+                <div class="concept-box">
+                    <strong>おひとりさまの財産がたどる「国庫帰属」の仕組み</strong>
+                    法定相続人（配偶者、子、親、兄弟姉妹など）が一人もいない人が亡くなった場合、その遺産は家庭裁判所から選任された専門家が清算手続きを行った後、最終的に残った全額が国に吸い上げられる制度。自分の意志で財産の行き先を指定するには、元気なうちに「法的な意思表示」を完了させておくことが絶対条件となる。
+                </div>
+
+                <h2>「手続きが面倒」という現実と、生命保険の限定的な活用</h2>
+                <p>こうした問題に対し、最近では「受取人を特定の寄付先団体やパートナーに指定できる生命保険（遺贈寄付型保険など）」も登場しています。遺言書を作成するよりはシンプルで、死亡時に口座凍結をすり抜けて迅速に現金を届けられるというメリットはあります。</p>
+                <p>しかし、正直に申し上げれば、<b>「わざわざ保険に加入し直すための対面手続きや書面提出などのプロセス自体が、デジタルネイティブな現代人にとっては依然として煩雑で重い」</b>という課題もあります。新NISAのように「スマホで完結し、あとは全自動」というスムーズな体験に慣れている人にとって、現在の資産承継や寄付の手続きはまだまだ心理的・物理的なハードルが高いと言わざるを得ません。</p>
+
+                <div class="highlight-quote">
+                    資産を「増やす」仕組みはスマホ一つで極めてスマートになった反面、
+                    資産を「きれいに手放す・遺す」ための仕組みは、いまだアナログで重い手続きの壁に阻まれています。
+                </div>
+
+                <h2>これからどうあるべきか：おひとりさま時代の「デジタル出口戦略」</h2>
+                <p>今後、独身世帯がさらに増えていく日本において、金融サービスや制度はどのように変化していくべきなのでしょうか。筆者は以下の3つの進化が必要であると考えています。</p>
+
+                <ul>
+                    <li><b>1. 証券・銀行口座への「事前受取人指定機能」の実装</b><br>保険を経由せずとも、NISA口座やネット銀行のマイページ上で「本人が亡くなった場合、残高を〇〇団体または〇〇氏に送金する」とあらかじめデジタル上で事前設定できるインフラの整備。</li>
+                    <li><b>2. 生命保険の「出口専用・スマホ完結型」への簡素化</b><br>生命保険業界も、複雑な保障や審査を削ぎ落とし、「死亡時の資産移転」だけに特化した超シンプルなスマホ完結型のサービスを提供していくこと。</li>
+                    <li><b>3. 「増やす」と同等の価値としての「手放すデザイン」</b><br>金融機関が「増やすアドバイス」だけでなく、人生の終盤において資産をどう社会に還元するかという「スマートな出口戦略」をセットで提供する文化の定着。</li>
+                </ul>
+
+                <h2>結論：未来の選択肢を見据えつつ、今できる最高デザインを</h2>
+                <p>現時点では、遺言書にせよ寄付型保険にせよ、完璧でストレスフリーな「おひとりさまの出口システム」はまだ途上段階にあります。だからこそ、特定の手段に飛びつく必要はありません。</p>
+                <p>まずは新NISAなどを活用して自分の人生を守るための資産をしっかり構築すること。そして、将来的に金融サービスや法制度がよりスマートに進化していく流れを注視しながら、「余った資産の一部をどうやって社会や大切な人に心地よく還すか」という、自分なりの「お金の卒業論文」のシナリオを少しずつ描いておくこと。それこそが、これからの時代を生きるおひとりさまにとっての、もっとも知的で自由なマネープランのあり方ではないでしょうか。</p>
+            </div>
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
