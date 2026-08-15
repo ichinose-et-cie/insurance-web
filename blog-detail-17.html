@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-17"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>「もし自分に万が一のことがあったら、家族は自分のネット銀行や暗号資産、加入している保険に気づいてくれるだろうか？」。ふと、そんな不安が頭をよぎったことはないでしょうか。逆に、親や配偶者が亡くなった際、強固なスマホのロックを前に「どこに何の資産があるのかさっぱり分からない」と途方に暮れるケースも増えています。</p>
+                <p>システムの裏側を作ってきた人間としてこの状況を眺めていると、社会の急速なデジタル化に対して、「資産の相続・継承プロセス」という社会システムが大きく取り残されている構造的なギャップを感じざるを得ません。</p>
+
+                <h2>紙の証券が届かない時代に「資産が消える」リスク</h2>
+                <p>昔であれば、自宅の金庫や引き出しを探せば、保険証券や銀行の通帳、株券といった「物理的な手がかり」が必ず残されていました。しかし現代では、ネット専業の生命保険、ペーパーレスの口座、あるいは暗号資産（仮想通貨）など、すべてがデジタルデータとしてクラウドやスマホの中に閉じ込められています。</p>
+                <p>通知はすべてメールやアプリのプッシュ通知で届くため、本人が倒れた瞬間、その存在自体が遺族から「不可視化」されてしまうのです。これは単なる個人の注意不足ではなく、デジタル化が生んだ新しい社会課題と言えます。</p>
+
+                <h2>意外と知られていないセーフティネット「生命保険契約照会制度」</h2>
+                <p>こうした「どこに保険があるか分からない」という事態に対し、業界全体で用意されている強力なアナログのセーフティネットが存在します。それが一般社団法人生命保険協会が運用する<b>「生命保険契約照会制度」</b>です。</p>
+                <p>これは、災害時だけでなく平時においても、死亡や認知機能低下により自力で請求が困難になった際、遺族などが照会を行えば、国内すべての生命保険会社（40社以上）に対して一括で契約の有無を調査してくれる仕組みです。</p>
+
+                <div class="concept-box">
+                    <strong>生命保険契約照会制度とは</strong>
+                    契約者や被保険者が死亡・認知機能低下・災害罹災などの事由に該当した際、親族等からのオンライン申請（または郵送）に基づき、生命保険協会が一括で全生命保険会社へ契約の有無を照会してくれる制度。証券が見つからない場合でも、一回の照会で加入状況を網羅的に確認できる。
+                </div>
+
+                <p>この制度は非常に心強い存在であり、遺族が路頭に迷うのを防ぐ「最後の砦」として機能しています。しかしシステム的な視点で見れば、これはあくまで「事が起きた後に、人間が手動で照会をかける」という過渡期的な解決策でもあります。</p>
+
+                <h2>制度の先へ。「デジタル相続・資産承継」を自動化するテクノロジー</h2>
+                <p>いま、この「後から探す（照会する）」というアプローチをさらに進化させ、テクノロジーによって「安全に引き継ぐ（自動承継する）」取り組みが急速に進んでいます。それが<b>「デジタル相続・資産承継テクノロジー」</b>です。</p>
+                <p>これは、生前に暗号資産の秘密鍵、ネット銀行や保険の契約情報、さらには遺したいメッセージなどを暗号化してクラウド上で安全に一元管理し、特定の条件（一定期間のアクセスがない、公的データとの連携など）が満たされた際、あらかじめ指定された受取人へ安全に通知・解凍キーを渡すプログラマブルな仕組みです。</p>
+
+                <ul>
+                    <li><b>デッドマンズ・スイッチ（生存確認機能）：</b>アプリからの定期通知への応答が途絶えた際、段階的に確認を行い、最終的に指定の家族へ重要情報を自動で安全伝送する仕組み。</li>
+                    <li><b>暗号キー・認証情報の分割管理：</b>秘密鍵やパスワードをそのまま保存するのではなく、分散して保持し、条件が揃ったときのみ復元できる高度な暗号化セキュリティ。</li>
+                    <li><b>マイナンバー・電子証明書連携：</b>公的な死亡届のデータやマイナポータルとシステム連携し、確実に「万が一の発生」を検知して次世代へ引き継ぐインフラ設計。</li>
+                </ul>
+
+                <div class="highlight-quote">
+                    生前のプライバシーは絶対に守り抜き、
+                    万が一の「その時」だけは確実に安心をバトンタッチする。<br>それが現代のシステム設計に求められる究極のバランスです。
+                </div>
+
+                <h2>「プライバシー」と「安心の継承」を両立させるシステム設計</h2>
+                <p>デジタル終活・資産承継システムを設計する上で、最も難易度が高いのは「生前のプライバシー保護」と「死後の確実なデータ開示」の両立です。いくら家族であっても、生きている間はスマホのなかみや資産の詳細を見られたくないのが人情でしょう。</p>
+                <p>ゼロ知識証明や最新の暗号化技術は、「生きている間は管理者すら内容を見ることができない」状態を保ちながら、「万が一のときだけ、正しい受取人にだけ解凍される」という相反する要求を数学的に解決します。</p>
+                <p>「生命保険契約照会制度」のような社会的な枠組みと、データを自動で安全につなぐ「資産承継テクノロジー」。この双方の歯車が噛み合ったとき、私たちの資産や想いはスマホのロックの向こう側に消えることなく、次の世代へと確実につなぐことができるのではないでしょうか。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
