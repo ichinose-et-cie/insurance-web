@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-18"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>「子育て世帯の負担軽減」が叫ばれるなか、税制改正の議論でたびたびスポットが当たるのが「生命保険料控除の拡充」です。少子化対策の一環として、子育て世代の所得税・住民税の負担を少しでも減らそうという取り組みが進められています。</p>
+                <p>私自身、日々のニュースを追いかける中での備忘録として、この制度改正が読者や生保業界のシステムにどんな影響を与えるのか、構造的な視点から整理しておきたいと思います。</p>
+
+                <h2>制度のおさらい：何がどう変わる（変わろうとしている）のか？</h2>
+                <p>現行の生命保険料控除（新制度）は、「一般生命保険」「介護医療保険」「個人年金保険」の3つの枠があり、それぞれ所得税で最大4万円（合計最大12万円）の控除が受けられる仕組みです。</p>
+                <p>今回の「子育て世帯拡充」の議論の中心は、扶養する子どもがいる世帯を対象に、<b>「一般生命保険料控除」などの限度額を上乗せする</b>という点にあります。</p>
+
+                <div class="concept-box">
+                    <strong>子育て世帯向け 生命保険料控除の拡充とは</strong>
+                    子育て世帯の税負担を軽減するため、23歳未満の扶養親族などがいる世帯を対象に、一般生命保険料控除の適用限度額（現行：所得税4万円）を引き上げる動きのこと。万が一の保障を手厚く確保しながら、家計の節税効果を高めることを目的としている。
+                </div>
+
+                <p>万が一の事態に備えて手厚い死亡保障が必要になる子育て期。しかし現実には、保険料の支払いが家計を圧迫しやすい時期でもあります。この制度拡充は、子育て世代の「安心の確保」と「手元資金の残しやすさ」を同時に支援する実用的な施策と言えます。</p>
+
+                <h2>システム屋の視点：「条件分岐の複雑化」と年末調整UXの課題</h2>
+                <p>制度としては非常にありがたい話ですが、システム設計の裏側に目を向けると、一つの懸念が浮かび上がります。それは<b>「年末調整・確定申告システムの条件分岐がさらに複雑化する」</b>という点です。</p>
+                <p>「旧制度か新制度か」の判定に加え、「扶養親族の年齢（23歳未満か）」「世帯主か」「対象年の12月31日時点での家族構成」といった動的な属性判定が上乗せされます。ユーザーが控除申告書を入力する際、UI（画面設計）が不親切だと「自分が拡充の対象なのかどうか分からない」という迷いを生む原因になります。</p>
+
+                <div class="highlight-quote">
+                    良い制度であっても、手続きのUX（ユーザー体験）が複雑すぎれば
+                    ユーザーはその恩恵を実感しにくくなります。<br>
+                    複雑なロジックはシステムの裏側でスマートに処理されるべきです。
+                </div>
+
+                <h2>税制改正が保険商品とユーザー体験に与える変化</h2>
+                <p>今後、この拡充策が定着・浸透していくにつれ、保険の選び方や生保システムにも変化が出てくると予想されます。</p>
+
+                <ul>
+                    <li><b>控除枠をフル活用する商品設計：</b>拡充された控除枠にぴったり収まるような、子育て世帯向けのパッケージ商品や自動試算シミュレーターの登場。</li>
+                    <li><b>マイナポータル・年末調整の完全自動化：</b>マイナポータル連携（e-Gov / 年末調整控除申告書作成アプリ等）により、ユーザーが意識しなくても「最も得になる控除枠」が自動適用されるUIの進化。</li>
+                    <li><b>見直しのきっかけづくり：</b>「税金がお得になるから」という動機が、放置されがちな定期保険や収入保障保険を見直す好機になる。</li>
+                </ul>
+
+                <p>税制という「社会のルール」が変わるとき、それを受け止めるITシステムや手続きのUIがどれだけシームレスに変化できるか。ユーザーが複雑な計算を意識することなく、自然と節税と手厚い保障の恩恵を受け取れる世界になることを楽しみに注視していきたいと思います。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
