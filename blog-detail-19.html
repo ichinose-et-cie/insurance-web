@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-19"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>これまでの記事では、ライフプランにおける合理的な選択肢として「シンプルな保障」や「公的制度の活用」の重要性をお伝えしてきました。万が一の事態に対する備えを考える際、多くの現役世代が「死亡リスク」や「がん等の病気リスク」以上に現実的な脅威として直視し始めているのが、<b>「長期的な休職や不調による就労不能リスク」</b>です。</p>
+                <p>働き方の変化やメンタルヘルス意識の高まりに伴い、近年各社から「就労不能保険」や「所得補償保険」といった商品が数多く登場しています。しかし、「働けなくなったら給付金が出るなら安心だ」と安易に加入すると、実際にトラブルが起きた際に大きな罠に突き当たることになります。本当に必要な公的保障の現実と、民間保険の「支払い条件の壁」について解き明かします。</p>
+
+                <h2>公的保障の「厚み」を知り、リスクを過大評価しない</h2>
+                <p>就労不能への対策を考える第一歩は、まず自分が利用できる公的制度の正確な把握から始まります。特に会社員や公務員の場合、業務外の病気やケガで長期間働けなくなったとしても、いきなり収入がゼロになるわけではありません。健康保険から支給される<b>「傷病手当金」</b>により、通算1年6ヶ月にわたり給与の約3分の2相当額がカバーされます。</p>
+                <p>一方で、自営業やフリーランスなどの国民健康保険加入者には公的な傷病手当金の制度が存在しないため、就労不能リスクへの耐性は大きく異なります。つまり、「全員が一律で民間保険に入るべき」というのは完全に誤りであり、まずは公的保障のギャップがどれだけあるのかを個別に診断することが不可欠です。</p>
+
+                <div class="concept-box">
+                    <strong>就労不能における「公的保障」の格差</strong>
+                    <b>会社員・公務員：</b>傷病手当金（最大1年6ヶ月・給与の約2/3支給）＋障害厚生年金があり、一定期間の生活基盤は公的制度で守られる。<br>
+                    <b>自営業・個人事業主：</b>傷病手当金がなく、障害年金も障害基礎年金（1・2級のみ）に限られるため、民間保障や自主貯蓄による自衛の優先度が極めて高くなる。
+                </div>
+
+                <h2>就労不能保険に潜む最大の大穴、「メンタルヘルス保障」の壁</h2>
+                <p>就労不能リスクを語る上で、避けて通れないのが「メンタルヘルスの不調による休職」です。現代の休職原因の首位を占めるのは精神疾患ですが、こここそが<b>民間保険で最もカバーしにくく、消費者が激しい勘違いを起こしやすい最大のポイント</b>です。</p>
+
+                <p>多くの就労不能保険は、がんや脳卒中といった身体的な病気に対しては「在宅療養」でも比較的柔軟に給付金が支払われる設計になっています。しかし、うつ病などの精神疾患においては、<b>「指定の精神疾患で60日以上の『入院』が必要」</b>といった極めて厳しい要件が課されていたり、そもそも支払対象外となっている商品が珍しくありません。医師から「休職」と診断され、仕事を休まざるを得ない状況であっても、保険会社の定める「所定の就労不能状態」に該当しなければ給付金は1円も降りないのです。</p>
+
+                <div class="highlight-quote">
+                    「医師から休職を命じられた＝保険金が出る」ではありません。<br>
+                    休職理由の大半を占めるメンタル不調ほど、<br>
+                    民間保険の「支払いの壁」は高くそびえ立っています。
+                </div>
+
+                <h2>保険の制限に振り回されない「最強の防衛策」とは</h2>
+                <p>では、私たちは働けなくなるリスクにどう向き合うべきでしょうか。複雑な支払い要件が絡み合い、いざという時に頼れるか不透明な保険に毎月保険料を払い続けることは、決してスマートな選択とは言えません。</p>
+
+                <p>支払い条件のハードルが存在するリスクに対して、最も確実かつ最強の防衛策となるのは<b>「生活防衛資金（現金貯蓄）の確保」</b>です。現金であれば、原因がメンタル不調であろうと身体的な病気であろうと関係なく、休職直後から生活費や固定費として100%自由に使うことができます。</p>
+
+                <p>会社員であれば「傷病手当金で不足する給与の1/3」を埋めるための半年〜1年分の貯蓄を蓄えること。自営業者であれば公的保障の薄さを埋めるためのキャッシュを優先して作ること。複雑な商品で安心を買おうとする前に、まずは手元の流動性を高めるシンプルなリスク管理こそが、時代の変化に揺るがない本質的な解となるのではないでしょうか。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
