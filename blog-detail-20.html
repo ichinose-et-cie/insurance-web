@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-20"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>これまでの記事では、ライフプランにおける合理的な選択肢として、無駄な特約を削ぎ落とした「シンプルな保障」の重要性をお伝えしてきました。こうした保険の設計思想を考える上で、近年大きな変化が起きているのが、事実婚や同性パートナーシップなど<b>「家族のかたちの多様化」に伴う保険実務のアップデート</b>です。</p>
+                <p>多様なライフスタイルに対応するため、大手生命保険会社を中心に「配偶者以外（パートナー）」を保険金の受取人に指定できる動きが広がりつつあります。一見すると「誰でも自由に保障を準備できる時代になった」ように思えますが、現場の実務や税制の観点から紐解くと、そこには法律婚にはない<b>「手続きと税金の壁」</b>が厳然と存在しています。</p>
+
+                <h2>「対応可能」の裏にある、厳格な書類と手続きのハードル</h2>
+                <p>法律上の配偶者であれば、保険金の受取人指定や請求手続きは極めてシンプルに行えます。一方で、事実婚や同性パートナーを受取人に指定する場合、「契約できる」と謳っている保険会社であっても、実際の引き受けには厳格な条件が課されるのが一般的です。</p>
+                <p>具体的には、「一定期間以上の同居を証明する住民票」をはじめ、自治体が発行する「パートナーシップ宣誓書」や、お互いの関係性を証明する「公正証書」の提出を求められるケースが少なくありません。単に「指定できる」という言葉だけを鵜呑みにせず、加入時および支払い時にどのような証明書類が必要になるのかを事前に厳しくチェックしておく必要があります。</p>
+
+                <div class="concept-box">
+                    <strong>【補足】生前給付に役立つ「指定代理請求人」の扱い</strong>
+                    本人が重病や認知症などで自ら保険金を請求できない際、代わりに手続きを行う「指定代理請求人」については、同居確認などの簡易な手続きでパートナーを指定できる保険会社が増えており、受取人指定ほどハードルは高くありません。ただし、受け取った給付金は「本人の医療・療養費」として正しく管理しないと、後から身内とのトラブルや贈与税の疑いが生じる点には注意が必要です。
+                </div>
+
+                <h2>受取人が指定できても逃げられない「相続税の壁」</h2>
+                <p>仮に書類のハードルをクリアし、パートナーを受取人に指定できたとしても、次に立ちはだかるのが<b>「税制上の致命的なデメリット」</b>です。ここを理解せずに保障額を設定すると、いざという時に残されたパートナーが大きな税負担に苦しむことになります。</p>
+                <p>法律上の配偶者であれば、「500万円 × 法定相続人数」の死亡保険金非課税枠が認められ、さらに非常に手厚い「配偶者の税額軽減（最低1億6,000万円まで非課税）」が適用されます。しかし、法律上の配偶者に該当しないパートナーが受け取る保険金は「遺贈（遺言等による財産の譲渡）」扱いとなり、<b>非課税枠は一切使えません。さらに、相続税額が2割加算される</b>という厳しい税制が適用されます。</p>
+
+                <div class="highlight-quote">
+                    「保険金が受け取れる＝法律婚と同じ扱い」ではありません。<br>
+                    税制上の非課税枠が使えないパートナーシップだからこそ、<br>
+                    税金分も見据えた「掛け捨てでの必要最小限の設計」が問われます。
+                </div>
+
+                <h2>保険だけに頼らない、シンプルで強固なリスク管理</h2>
+                <p>多様化する家族のかたちにおいて、保険は確かにパートナーの生活を守る手段の一つとなり得ます。しかし、税制上の優遇が得られない以上、保険だけで全ての資金ニーズをカバーしようとすると、過剰な保障額（＝高い保険料）を払い続ける悪循環に陥ります。</p>
+
+                <p>私たちが取るべき合理的なアプローチは、<b>「公的保障の薄さや税負担を考慮した上で、掛け捨ての死亡保険で最小限のベースを整え、残りは現金貯蓄や公正証書などの法的な備えで補う」</b>というバランス感覚です。</p>
+
+                <p>契約を必要以上に複雑化させず、保障はどこまでもシンプルに留めること。そして浮いた資金で手元の流動性（現金）を高めておくことこそが、制度の壁を乗り越え、大切なパートナーと自分自身の暮らしを長期的に守り抜く最も確実な防衛策となるのではないでしょうか。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
