@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-21"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>前回の記事では、事実婚や同性パートナーシップなど「家族のかたちの多様化」に伴う生命保険実務について、税制上の壁（非課税枠の不適用や相続税2割加算）を中心に解説しました。しかし、当事者が直面する障害は、こうした金銭や税金の問題だけにとどまりません。</p>
+                <p>保険金をパートナーに残そうとするとき、そこには手続きやプライバシー、人間関係にまつわる<b>「心理的・社会的なハードル」</b>が厳然と存在しています。契約時から万が一の支払時に至るまで、法律婚には存在しない構造的なリスクについて紐解きます。</p>
+
+                <h2>プライバシーの壁――職場や親族へのアウティングリスク</h2>
+                <p>パートナーを受取人に指定して保険に加入・維持するプロセスでは、自身のライフスタイルや関係性を意図しない形で周囲に知られてしまう「アウティング」のリスクが常についてまわります。</p>
+                <p>まず大きな盲点となるのが、毎年秋頃に送付される<b>「生命保険料控除証明書」</b>です。証明書のハガキや添付書類には「保険金受取人」の氏名や続柄が印字されるケースが多く、年末調整の手続きを通じて職場の総務・人事担当者にパートナーの存在や関係性が伝わってしまう懸念があります。職場や親族に自身の関係性を公にしていない（クローゼットな）状態を守りたい人にとって、この書類一枚が大きな心理的障壁となります。</p>
+                <p>さらに、加入手続きの段階で自治体のパートナーシップ宣誓書や公正証書の提出を求められる際、募集人（営業担当者）や公証役場へプライバシーを開示しなければならない点も、契約への参入障壁となっています。</p>
+
+                <div class="concept-box">
+                    <strong>【実務上の課題】生命保険料控除とプライバシー</strong>
+                    年末調整で税金優遇（保険料控除）を受けるには、控除証明書の提出が不可欠。しかし、受取人欄の記載によって職場の担当部署にプライバシーが開示される可能性があり、「節税効果をとるか、プライバシーを守るか」という法律婚では発生しえない二段構えの選択を迫られることになる。
+                </div>
+
+                <h2>万が一の現場で起きる、親族との感情的トラブル</h2>
+                <p>無事に契約を維持できたとしても、真の試練は「万が一の事態」が起きた際に訪れます。被保険者が亡くなった際、存在を知らなかった法定相続人（親や兄弟など）とパートナーの間で、感情的な対立や摩擦が起きるケースは珍しくありません。</p>
+                <p>「なぜ見知らぬ（あるいは親族が認めていない）人物が受取人になっているのか」という疑念から、保険金の請求手続きや遺品整理の場で過酷なトラブルへ発展することがあります。大切なパートナーを遺して先立つ本人の思いとは裏腹に、残されたパートナーが最も傷つき、精神的に追い詰められてしまうという切ない現実が存在します。</p>
+
+                <div class="highlight-quote">
+                    「保険金を遺すこと」ができたとしても、<br>
+                    手続きや周囲の理解が追いついていなければ、<br>
+                    残された大切な人が傷つく結果になりかねません。
+                </div>
+
+                <h2>個人の工夫を超えた「社会制度の発展」への期待</h2>
+                <p>このように、多様な家族のかたちにおける保険活用には、金銭（税金）・手続き・プライバシー・人間関係という多重のハードルが立ちはだかっています。現状では「受取人指定にこだわらずシンプルな現金蓄積（貯蓄）を優先する」「遺言書を慎重に作成する」といった個人の工夫で自己防衛を図るほかありません。</p>
+
+                <p>しかし、個人のファイナンシャルプランニングや民間保険会社の努力だけで、これらの根本的な格差やリスクを完全に解消することには限界があります。</p>
+
+                <p>誰もが不必要なプライバシーの露出や人間関係のトラブルに晒されることなく、大切な人を当たり前に守ることができる社会へ――。多様化する家族のかたちに法制度や社会の理解が追いつき、真の意味で誰もが安心できる仕組みへと発展していくことを、強く期待せずにはいられません。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
