@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-22"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>これまで、家計の固定費削減における合理的な選択肢として「シンプルな保障選び」や「無駄な特約の削ぎ落とし」の重要性をお伝えしてきました。日頃から家計や固定費の見直しを意識されている方にとって、毎年の固定費として重くのしかかるのが<b>「自動車の維持費」</b>です。</p>
+                <p>最近ニュースでも話題となっているのが、<b>2028年に向けた自動車関連税制の抜本的な見直し（いわゆる2028年改定）</b>です。「EV（電気自動車）なら税金が安くなる」「エコカー減税の基準が変わる」といった表面的な情報だけに惑わされると、数年後に思わぬ維持費の増加に直面することになります。今回の税制改定のメリット・デメリット、そして自動車保険（任意保険）に及ぶ意外な波及効果について整理・解説します。</p>
+
+                <h2>2028年自動車税改定の「メリット」と「隠れたデメリット」</h2>
+                <p>今回の税制改定の全体像を捉えるには、車を購入する際の「イニシャルコスト」と、所有し続ける「ランニングコスト」を分けて考える必要があります。</p>
+                <p>短期的な<b>メリット</b>として挙げられるのは、新車購入時に課されていた「環境性能割」の廃止や減税措置の簡素化です。これにより、新車購入時の初期費用（イニシャルコスト）が一部抑えられるケースが出てきます。</p>
+                <p>しかし、中長期的な<b>デメリット</b>として注意すべきは、所有し続けることでかかる自動車税・重量税（ランニングコスト）の負担増です。これまで優遇されていたEVやPHV（プラグインハイブリッド車）について、車両重量やバッテリー容量に応じた新たな課税方式（排気量換算の見直し等）の導入が検討されています。さらに、ガソリン車を含む従来の環境基準も厳格化され、これまでエコカー減税の対象だった車種が対象外となるリスクが潜んでいます。</p>
+
+                <div class="concept-box">
+                    <strong>2028年税制改定における「維持費」の構造変化</strong>
+                    <b>購入時（イニシャル）：</b>環境性能割の廃止等により、一部車種で初期コストが緩和。<br>
+                    <b>保有時（ランニング）：</b>EV・PHVへの重量ベース課税導入やエコカー減税基準の厳格化により、将来的な毎年の税負担が増加傾向に。
+                </div>
+
+                <h2>見落としがちな罠、税制改定が「自動車保険」に与える波及効果</h2>
+                <p>自動車税の改定によって影響を受けるのは、国や自治体に払う税金だけではありません。実は、民間会社で加入する<b>「自動車保険（任意保険）」の保険料にも大きな波及効果</b>が及びます。</p>
+
+                <p>税制優遇に合わせて普及が進むEVや最新の電動車は、大容量バッテリーの搭載により「車両重量が重い」という特徴があります。重い車両は万が一の事故時に相手や自車に与える損害規模が大きくなりやすく、さらに先進技術や特殊部品が詰まっているため「修理費用が高額化」しやすい傾向にあります。</p>
+
+                <p>自動車保険は、車種ごとのリスクや修理費実績に応じて料率（型）が決まる仕組みです。つまり、<b>「車体価格や修理費が高い車が増える＝車両保険料の相場全体が押し上げられる」</b>という構造が生まれます。税金の改定をきっかけに電動車や先進車種へ乗り換えた結果、税金以上に自動車保険料が高騰し、二重の固定費増に悩まされるケースが懸念されます。</p>
+
+                <div class="highlight-quote">
+                    「税金が安くなるから」と安易に電動車を選んでも、<br>
+                    車体重量と高額な修理費により「自動車保険料」が跳ね上がり、<br>
+                    維持費全体ではマイナスになる落とし穴が存在します。
+                </div>
+
+                <h2>車も保険も本質は同じ。固定費の「トータル最適化」を</h2>
+                <p>「税制優遇で安く買えた」と喜んでいても、いざ乗り換えてから車検費用や車両保険料の見積もりを見て「こんなに維持費が高いのか」と驚くケースは少なくありません。車にかかる固定費は、自動車税だけでなく「任意保険料」「車検代」「燃料・充電代」まで含めた<b>トータルコストで評価しなければ意味がない</b>のです。</p>
+
+                <p>これは、<b>「生命保険の見直し」</b>とも全く同じ構造と言えます。目先の割引や特定の保障につられて不要な特約を上乗せし、結果的に毎月の固定費全体を膨らませてしまっては本末転倒です。</p>
+
+                <p>もし車の維持費が上がってしまう場合は、根無しの不安から保険を抱え込むのではなく、合理的な固定費の調整を行いましょう。例えば、自動車保険であれば「車両保険の免責金額（自己負担額）」を適切に設定して保険料を抑える方法があります。同時に、生命保険側で重複しがちな「傷害特約」などを整理すれば、家計全体の保険料バランスをスマートに整えることが可能です。</p>
+
+                <p>車の税制改定という社会の変化をきっかけに、車関係のコストだけでなく、ご家庭の生命保険も含めた「毎月の固定費全体のバランス」を今一度総点検してみてはいかがでしょうか。無駄を削ぎ落とし、手元に残るキャッシュを最大化することこそが、どんな制度改正にも揺るがない確実な防衛策となります。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
