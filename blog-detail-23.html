@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-23"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>「生命保険の解約が急増している」というニュースを目にして、単なる「生活苦による切り詰め」と受け取った方も多いかもしれません。しかし、保険業界や金融の構造を客観的に眺めてみると、これは消費者のマネーリテラシー向上と、<b>金融環境の変化がもたらした必然的なマネームーブ（資金移動）</b>のように映ります。</p>
+                <p>なぜ今、これほどまでに解約が増えているのか。その真相を紐解く鍵は、日銀の政策転換に伴う「金利上昇」と、過去に加入した保険商品の設計との間に生じた「大きなギャップ」にあります。</p>
+
+                <h2>「過去の最適解」が「現在のボトルネック」に変わる構造</h2>
+                <p>保険商品において、契約時に約束される「予定利率」は非常に重要な設定値です。超低金利時代が長く続いた日本において、数年前までに加入した貯蓄型保険（終身保険や学資保険、個人年金保険など）の利率は、当時の低い水準で「固定」されています。</p>
+                <p>金融環境の構造から見れば、<b>「過去の固定金利のまま取り残され、現在の金利上昇局面に対応できなくなった契約」</b>と言えます。世の中の金利が上昇に転じた現在、新しい金融環境へと移行していますが、過去に結んだ保険契約の条件は自動的には更新されません。</p>
+
+                <div class="concept-box">
+                    <strong>予定利率と金利上昇のギャップとは</strong>
+                    生命保険会社が契約時に顧客へ約束する運用利回りのこと。金利が上がると新商品の予定利率や他の運用手段の利回りは上昇するが、すでに加入している確定型保険の予定利率は固定されたままとなる。そのため、相対的に既存契約の保有コストや機会損失が大きくなってしまう。
+                </div>
+
+                <h2>マネームーブを加速させる「透明性」と「選択肢」</h2>
+                <p>かつてであれば、手続きの煩雑さや「元本割れ」への不安、情報非対称性によって、古い契約はそのまま維持される傾向にありました。しかし現代は、新NISAの拡充やネット証券の普及により、誰もが簡単に運用の効率性（コストや利回り）を比較・実行できるようになりました。</p>
+                <p>その結果、生活者はより論理的な判断を下すようになっています。「低い利率で資金がロックされる貯蓄型保険」を整理し、解約返戻金を回収して、より高いパフォーマンスが期待できる資産運用や、新しい金利環境に対応した金融商品へ資金を再配置しているのです。このポートフォリオの再構築こそが、ニュースが伝える「解約急増」の本質です。</p>
+
+                <div class="highlight-quote">
+                    解約ラッシュは、決して保険の敗北ではありません。<br>
+                    人々が自身の資産配置を最適化するために<br>選択肢を手に入れたという「進化のプロセス」です。
+                </div>
+
+                <h2>解約前に必ず確認すべき「3つのチェックポイント」</h2>
+                <p>ただし、ここで注意したいのは「解約＝常に正義」ではないという点です。一度解約した契約は元に戻せません。感情やトレンドだけで動く前に、以下の3つのポイントを必ず確認する必要があります。</p>
+
+                <ul>
+                    <li><b>バブル期〜超早期の「お宝保険」ではないか：</b> 予定利率が3〜5%を超えていた時代の契約であれば、現在の金利水準と比較しても依然として極めて高いパフォーマンスを誇ります。手放すべきではありません。</li>
+                    <li><b>保障機能（リスクヘッジ）の代替はあるか：</b> 貯蓄性だけに目が行きがちですが、解約すれば死亡保障や医療保障も同時に消失します。年齢や健康状態によっては、新しい保険に再加入できないリスクが発生します。</li>
+                    <li><b>解約控除（ペナルティ）のタイミング：</b> 契約経過年数が浅い場合、解約返戻金が払込保険料を大幅に下回る構造になっています。損失を出さないタイミングの見極めが不可欠です。</li>
+                </ul>
+
+                <h2>最適化の時代における、保険との付き合い方</h2>
+                <p>かつて生命保険は、「保障」と「貯蓄」を一つのパッケージに詰め込んだ万能な商品として機能していました。しかし、社会環境が激変し、金利が動き出した今、私たちはそのパッケージを分離し、自分にとって最適な形に再構築することを求められています。</p>
+                <p>ニュースの数字に惑わされる必要はありません。大切なのは、自分の契約が、今の時代の金融環境に対して正しく最適化されているかどうかを見極めることです。時代の変化に合わせて自らの金融ポートフォリオを点検する——今回の解約ラッシュという現象は、私たちが家計の設計図を見直す良いきっかけを示してくれているのかもしれません。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
