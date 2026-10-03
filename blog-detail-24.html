@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-24"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>「給与や事業収入にかかる税金は、増えれば増えるほど税率が高くなる（最大約55%）。それに比べて、株式投資や投信運用の利益はどれだけ稼いでも『約20%（申告分離課税）』で済むから絶対にお得だ」——投資や資産形成に取り組む方々の間で、このような会話を耳にしたことがあるかもしれません。</p>
+                <p>所得が高くなるほどその恩恵を強く感じられるこの分離課税ですが、今、その前提を揺るがす制度改定の議論が厚生労働省を中心に進んでいます。それが、<b>「金融所得を社会保険料の算定基準に反映させる」</b>という動きです。</p>
+                <p>単なる増税の噂にとどまらず、将来のマネープランの根幹に関わるこの問題。なぜ今このような見直しが進んでいるのか、そして私たちはどのように資産設計を守っていくべきなのか、構造的な視点から紐解きます。</p>
+
+                <h2>「申告しないから大丈夫」という抜け道が塞がれる構造</h2>
+                <p>現行の制度では、上場株式の譲渡益や配当金などの金融所得について「特定口座（源泉徴収あり）」を選択し、確定申告を行わなければ、税金関係は完結し自治体等に所得として通知されません。そのため、どれほど投資益が出ていても国民健康保険料や介護保険料の算定には反映されず、保険料跳ね上がりを回避できていました。</p>
+                <p>しかし、今回の見直し議論の本質は、<b>「確定申告をするかしないかという選択の違いによって、社会保険料の負担に差が生じる不公平感の解消」</b>にあります。マイナンバーと口座の紐付け等を活用し、申告の有無にかかわらず金融所得を把握して保険料算定や医療費の自己負担割合の判定に反映させるインフラが整いつつあるのです。</p>
+
+                <div class="concept-box">
+                    <strong>金融所得の社会保険料反映（一体化）とは</strong>
+                    これまで確定申告をしなければ社会保険料の算定対象外となっていた金融所得（株式譲渡益・配当金等）を、システム連携によって把握し、保険料や医療費の窓口負担割合の判定に活用する仕組み。これにより「確定申告をしないことで保険料の上乗せを回避する」という従来の手法が通用しなくなる方向で検討が進んでいる。
+                </div>
+
+                <h2>「実質的な手残り」の変化とポートフォリオへの影響</h2>
+                <p>ここで注意したいのは、「運用益に対して追加の保険料が一律数%課される」と決定したわけではないという点です。社会保険料には年間の負担上限（最高限度額）が設けられているほか、加入している健康保険の種類（会社員の被用者保険か、国民健康保険・後期高齢者医療制度か）によっても影響の表れ方は異なります。</p>
+                <p>しかし、金融所得が所得算定に加算されることで、保険料の上限に達していない層は保険料額が跳ね上がったり、医療機関での窓口負担割合（1割〜3割）が引き上げられたりする可能性があります。結果として、表面上の「約20%の税金」に加えて実質的な自己負担が増加し、<b>「手残り利回り」が押し下げられるリスク</b>が生じるのです。</p>
+
+                <div class="highlight-quote">
+                    制度変更への対策は、単なる節税ノウハウではありません。<br>
+                    「税金・社会保障・非課税枠」の構造を捉え直し<br>自らの資産配置を再構築する「最適化のプロセス」です。
+                </div>
+
+                <h2>ルール変更の時代を生き抜く「3つの資産防衛アプローチ」</h2>
+                <p>制度の具体化が進む中で、感情的になって投資を控えるのは本末転倒です。これからの時代に個人が講じるべきアプローチとして、以下の3つのポイントが挙げられます。</p>
+
+                <ul>
+                    <li><b>非課税枠（新NISA・iDeCo）の限界活用：</b> 新NISAやiDeCoで得られる運用益は制度上「非課税所得」となるため、社会保険料の算定対象からも除外される方針とされています。制度変更の波を受けない「最強のシェルター」として、これらの枠を上限まで埋める優先順位がさらに高まります。</li>
+                    <li><b>「保険を活用した資産形成」の再評価：</b> 個人年金保険料控除などの税制優遇が適用される商品や、保障と資産形成を兼ねた積立型保険は、金融所得（キャピタルゲイン）とは異なる枠組みで管理されます。手残りを手堅く残す「安全資産」としてのポートフォリオ上の価値が再浮上します。</li>
+                    <li><b>税金と社会保障費を合わせた「トータル手残り」の視点：</b> これからは「表面上の利回り」だけでなく、「税金と社会保険料の負担増を踏まえた実質的な手残り」を意識したアセットアロケーション（資産配分）の設計が不可欠になります。</li>
+                </ul>
+
+                <h2>変化するルールに合わせたマネープランのアップデート</h2>
+                <p>「累進課税を避けて金融所得で増やす」という戦略は今後も強力ですが、社会保障費の増大に伴いその周りのルールは少しずつ厳格化しています。</p>
+                <p>ニュースや制度議論の噂にただ焦る必要はありません。大切なのは、制度の変化を冷静に見極め、「NISA・iDeCo」「保険商品」「課税口座」をどのように組み合わせれば最も手残りを守れるかという点検を行うことです。時代の変革期こそ、自身のマネープランを見直し、より強固な資産設計へとアップデートする良い機会と言えるでしょう。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
