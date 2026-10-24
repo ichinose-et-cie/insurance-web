@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-27"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>2026年10月1日、パートなどの短時間労働者が社会保険に加入する条件のうち、「106万円の壁」と呼ばれた月額賃金8.8万円以上の要件が撤廃されました。週20時間以上などの条件は残るため、壁は消えたのではなく、<b>「金額」から「時間」へ形を変えた</b>と言えます。</p>
+                <p>話題になるのは「社会保険に入ると手取りが減る」という点です。週1時間増やしただけで、手取りが年12万円台減る試算もあります（条件により異なります）。しかし、保険料は払って終わりではありません。本記事では、見落とされがちな<b>「もらえる側」</b>を中心に整理します。</p>
+
+                <div class="highlight-quote">
+                    「手取りが減る」ことは、単なる“コスト”ではありません。<br>
+                    それは“保険料の支払い”であり、<br>支払った先で何が手に入るのかを見て、はじめて損得が決まります。
+                </div>
+
+                <h2>見落とされがちな「もらえる側」：加入で増える公的保障</h2>
+                <p>社会保険に加入すると、保険料の約半分は会社が負担し、次のような給付が上乗せされます。</p>
+
+                <ul>
+                    <li><b>傷病手当金：</b> 病気やケガで働けないとき、給与の約3分の2が最長1年6か月支給されます。扶養内や国民健康保険には、原則ありません。</li>
+                    <li><b>障害厚生年金：</b> 加入中に初診日があれば、障害基礎年金に加えて3級や障害手当金も対象になります。</li>
+                    <li><b>出産手当金：</b> 出産のために休む期間の所得を補います。</li>
+                    <li><b>老齢厚生年金：</b> 65歳以降、基礎年金に上乗せして受け取れます。</li>
+                </ul>
+
+                <div class="concept-box">
+                    <strong>被用者保険と「扶養」の違い</strong>
+                    扶養内で働くと、保険料の負担がない代わりに、公的保障は基礎年金と被扶養者としての医療給付が中心になる。社会保険に加入すると保険料の負担が生じる一方、傷病手当金や厚生年金といった「上乗せの保障の層」が一枚増える。
+                </div>
+
+                <h2>民間保険は「重複」を確認してから</h2>
+                <p>手取りが減ったからと保険料を削る前に、公的保障が厚くなった分、民間で備える範囲が変わっていないかを確認しましょう。</p>
+
+                <ul>
+                    <li><b>就労不能保険：</b> 傷病手当金が出るなら、民間で備えるのは給与の約3分の1の不足分と、1年6か月を超える長期の休業です。</li>
+                    <li><b>医療保険：</b> 高額療養費制度は働き方に関わらず使えます。2026年8月の見直し後の上限額を確認し、貯蓄で受け止める範囲を決めます。</li>
+                </ul>
+
+                <h2>壁を「損得」ではなく「構造」で見る</h2>
+                <p>家庭や個人の事情によって最適な働き方は異なりますが、壁を意識して時間を抑えるより、しっかり働いて社会保険料も払うという考え方もあります。手取りの減少は一時的でも、病気やケガ、老後に備える保障の層は、その後も長く自分を支えてくれるからです。</p>
+
+                <p>働くなら、しっかり働く。社会保険料を払うことは手取りを減らすことではなく、
+                    病気やケガ、老後に備える<b>公的な保障の層を自分で厚くする</b>こと。<br>壁を「損得」ではなく「構造」で見れば、その価値が見えてきます。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
