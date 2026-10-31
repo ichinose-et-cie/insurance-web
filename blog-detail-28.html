@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-28"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p><a href="blog-detail-27.html">前回の記事</a>で取り上げた「106万円の壁」は、2026年10月に撤廃されました。しかし、もう一つの壁が残っています。それが<b>「勤務先の企業規模」</b>、つまり従業員数の条件です。</p>
+                <p>この条件も、2035年に向けて段階的になくなっていきます。その先には、扶養内で働く人の前提である「第3号被保険者」の見直しの議論もあります。現在の状況と、備え方を整理します。</p>
+
+                <h2>企業規模の壁は、いつなくなる？</h2>
+                <p>短時間労働者が社会保険に加入する条件のうち、従業員数（被保険者数）の基準は、次のスケジュールで引き下げられます。</p>
+
+                <ul>
+                    <li><b>2024年10月〜（現在）：</b> 51人以上</li>
+                    <li><b>2027年10月：</b> 36人以上</li>
+                    <li><b>2029年10月：</b> 21人以上</li>
+                    <li><b>2032年10月：</b> 11人以上</li>
+                    <li><b>2035年10月：</b> 10人以下も含め、企業規模の要件を撤廃</li>
+                </ul>
+
+                <div class="concept-box">
+                    <strong>「企業規模要件」とは</strong>
+                    短時間労働者（週20時間以上など）が社会保険に加入する義務があるかを、勤務先の規模によって分ける条件のこと。同じ週20時間の働き方でも、勤務先が大きければ加入対象、小さければ対象外という差があった。この差を、約10年かけて段階的になくしていく。
+                </div>
+
+                <!-- <p>勤務先が小規模な人ほど、ここから数年のうちに順番が回ってきます。</p> -->
+
+                <h2>現時点では、扶養内のほうが手取りは多い</h2>
+                <p>配偶者の扶養に入る第3号被保険者は、国民年金保険料を自分で納めずに、基礎年金を受け取れます。社会保険に加入すると保険料の負担が生じるため、現時点では、扶養内にとどまるほうが手取りは多く、加入のメリットは実感しにくいのが実情です。年金の上乗せも、控えめです。</p>
+
+                <ul>
+                    <li><b>年金の上乗せ：</b> 月収約11万円（東京の最低賃金で週20時間）で10年加入すると、老齢厚生年金が年約7.2万円増える目安です。</li>
+                    <li><b>本人負担の保険料：</b> 厚生年金分で月約1万円です。年金額だけで見ると、回収には約17年かかる計算です。</li>
+                </ul>
+
+                <div class="highlight-quote">
+                    現時点では、扶養内のほうが“得”に見えます。<br>
+                    けれど、その前提がいつまで続くのかは、別の話です。
+                </div>
+
+                <h2>その前提は、変わりつつある</h2>
+
+                <div class="concept-box">
+                    <strong>第3号被保険者とは</strong>
+                    会社員や公務員（第2号被保険者）に扶養される、原則20歳以上60歳未満の配偶者で、年収130万円未満が目安。本人は保険料を直接納めずに、基礎年金を受け取れる。1986年に始まった制度。
+                </div>
+
+                <p>2026年9月、厚生労働省は第3号制度に関する検討会を始めました。これまでの議論では、適用拡大を進めて第3号を縮小していく方向が示されています。<b>廃止や新たな保険料負担は決まっておらず、検討の段階</b>ですが、企業規模の壁の撤廃は、その縮小を進める具体的な手段の一つです。</p>
+
+                <p>また、第3号は永続する立場ではありません。配偶者の退職や独立、65歳到達などで、資格を失う場合があります。配偶者の働き方に保障を預けている状態は、システムで言えば「単一障害点」を抱えている状態です。自分名義の保障を持つことは、その「冗長化」にあたります。</p>
+
+                <h2>40年前に設計された制度は、これからの時代に合うのか</h2>
+                <p>第3号被保険者は、1986年の基礎年金制度の導入とともに始まりました。当時は、会社員の夫と専業主婦の妻という世帯が標準的で、「働いて保険料を納める人が家計を支え、家庭にいる配偶者は、保険料を直接納めなくても基礎年金を受け取れる」という設計は、その時代に合った仕組みでした。</p>
+                <p>それから約40年。共働き世帯が増え、働き方も、家族の形も多様になりました。第3号の人数は、1995年度末の約1,220万人から、2025年12月末には約610万人へと半減しています。しかも、その半数以上が、すでに何らかの仕事に就いています。</p>
+
+                <div class="concept-box">
+                    <strong>「世帯単位」から「個人単位」へ</strong>
+                    第3号は、世帯の中の誰かが保険料を納めることで、家族全体を支える「世帯単位」の考え方に基づく。一方、適用拡大は、働く一人ひとりが自分の名前で社会保険に加入する「個人単位」の考え方に近い。制度の設計思想が、時代に合わせて少しずつ移ってきていると見ることもできる。
+                </div>
+
+                <p>制度が実際に変わるかどうかは、これからの議論次第です。ただ、変わるかどうかという以前に、<b>40年前の前提が、これからの時代にそのまま通用し続けるのか</b>という問いは、避けて通れないのかもしれません。</p>
+
+                <h2>備えは、制度の結論を待たなくていい</h2>
+                <p>今の働き方が正解かどうかは、家庭や個人の事情によって異なります。ただ、制度の結論を待たなくても、社会保険に加入して自分名義の保障を持つという選択肢があることは、知っておいて損はありません。</p>
+
+                <div class="highlight-quote">
+                    制度が変わるかどうかを待つ前に、<br>
+                    その制度が生まれた時代と、今の時代を並べてみる。
+                </div>
+                <p>家庭や個人の事情によって最適な働き方は異なりますが、壁を「いつ」ではなく「構造」で見れば、備えるべきことが見えてきます。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
