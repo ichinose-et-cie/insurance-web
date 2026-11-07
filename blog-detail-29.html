@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-29"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>2026年8月から、高額療養費制度が見直されました。「自己負担の上限が上がった」と聞いて、医療保険を増やすべきか迷った人もいるかもしれません。</p>
+                <p>変更点は、ざっくり言うと次の3つです。</p>
+
+                <ul>
+                    <li><b>月額の上限額が引き上げ：</b> 引き上げ幅は、所得区分によって異なります。</li>
+                    <li><b>年間上限が新設：</b> 1年間の自己負担の合計にも、上限ができました。</li>
+                    <li><b>多数回該当は据え置き：</b> 長期療養で上限に何度も達したときの軽減措置は、そのままです。</li>
+                </ul>
+
+                <p>本記事では、具体的な金額で変更点を確認したうえで、保険を増やす前に考えたい点と、その結論を整理します。</p>
+
+                <h2>変更の具体例：年収約370〜770万円の場合</h2>
+
+                <div class="concept-box">
+                    <strong>高額療養費制度とは</strong>
+                    1か月（月初から月末まで）に支払った公的医療保険の対象の医療費が、所得に応じた上限額を超えたとき、超えた分が払い戻される制度のこと。会社員や公務員、自営業者など、公的医療保険に加入している人なら、誰でも使える。
+                </div>
+
+                <p>会社員で最も該当者が多い区分ウの場合、変更点は次のとおりです。</p>
+
+                <ul>
+                    <li><b>月額の上限：</b> 80,100円＋1%から、85,800円＋1%になりました。</li>
+                    <li><b>年間上限：</b> 8月から翌年7月までの自己負担の合計が、年53万円までに抑えられます。</li>
+                    <li><b>多数回該当：</b> 直近12か月で3回以上上限に達すると、4回目から月44,400円になる仕組みは、そのままです。</li>
+                </ul>
+
+                <p>たとえば、1か月の総医療費が100万円（窓口での3割負担は30万円）になった場合、上限は<b>約9.3万円</b>です。（年間上限の払い戻しは、申請が必要な運用で始まると案内されています。）</p>
+
+                <p>月額だけを見ると負担増ですが、毎月上限に達する治療が続く場合は、年間上限と多数回該当で頭打ちになり、改定前より年間の負担が減るケースもあります。なお、2027年8月には、所得区分が細分化される予定です。</p>
+
+                <div class="highlight-quote">
+                    大切なのは、月額が上がったことよりも、<br>
+                    「年間では頭打ちになる」と知っているかどうか。<br>それが、医療費への不安の大きさを変えます。
+                </div>
+
+                <h2>保険を増やす前に、考慮しなければならない3つの点</h2>
+                <p>上限額が分かっても、それだけでは、医療保険が必要かどうかは判断できません。高額療養費が上限を決めているのは、制度の対象となる医療費だけだからです。</p>
+
+                <div class="concept-box">
+                    <strong>制度の「内側」と「外側」</strong>
+                    高額療養費が上限を決めているのは、公的医療保険の対象となる医療費という「内側」だけ。差額ベッド代や先進医療の技術料、働けない間の収入減といった「外側」には、制度の上限は及ばない。備えが必要かどうかは、この外側まで含めて考える。
+                </div>
+
+                <ul>
+                    <li><b>① 制度の「対象外」になる費用：</b> 差額ベッド代、入院中の食事代、先進医療の技術料（数百万円になる場合もあります）、保険適用外の治療や薬、通院の交通費、家族の付き添い費用は、全額が自己負担です。</li>
+                    <li><b>② 勤務先の制度：</b> 健康保険組合などの<b>付加給付</b>では、自己負担が月2.5万円程度に抑えられる例もあります（内容は健保組合ごとに異なり、協会けんぽには原則ありません）。また、<b>傷病手当金</b>は働けないとき、給与の約3分の2が最長1年6か月支給されます（社会保険の加入者が対象。）。
+                        <br>公的な傷病手当金の制度のない国民健康保険加入者の収入減は、就労不能保険の領域です（<a href="blog-detail-19.html">こちらの記事</a>）。</li>
+                    <li><b>③ 貯蓄：</b> 月約9万円の上限と、対象外の費用を、数か月分受け止められるかどうかです。</li>
+                </ul>
+
+                <h2>医療保険は、どう考えればいいのか</h2>
+                <p>「上限が上がったから、医療保険を増やす」のではなく、制度の上限、対象外の費用、勤務先の制度、貯蓄を並べたうえで、<b>足りない部分だけを保険で備える</b>という順番で考えます。</p>
+                <p>貯蓄に余裕が少ない、付加給付や傷病手当金がない、個室を希望したいといった事情があれば、備える範囲は広がります。</p>
+
+                <div class="highlight-quote">
+                    保険を「足す」前に制度と貯蓄で受け止められる範囲を確認する。
+                </div>
+
+                <p>家庭や個人の事情によって必要な備えは異なりますが、足りない部分が見えてから、必要な分だけを選ぶ。制度を「損得」ではなく「構造」で見れば、迷いは減っていきます。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
