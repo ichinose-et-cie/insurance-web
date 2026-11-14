@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-30"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>ここのところ、国内で企業の情報漏えいが相次ぎました。流出した個人情報は詐欺の精度を上げる材料になり得て、そこにAIで偽装した顔や声が加わったものが、ディープフェイク詐欺です。</p>
+                <p>では、もし被害に遭ったら、保険や補償で戻ってくるのでしょうか。結論から言うと、分かれ目は<b>「誰が操作したか」</b>です。</p>
+
+
+                <h2>補償の分かれ目は「誰が操作したか」</h2>
+
+                <div class="concept-box">
+                    <strong>「無断で操作された」と「本人が操作した」</strong>
+                    第三者が本人になりすまして口座やカードを無断で操作された場合は、銀行やカード会社の補償の対象になる一方、本人が自分の意思で送金や決済をした場合は、相手が詐欺師であっても、本人の取引として扱われる。
+                </div>
+
+                <ul>
+                    <li><b>第三者が無断で操作した場合（不正送金・カードの不正利用）：</b> 銀行やカード会社の補償の対象になります。ただし、本人に過失があれば減額や対象外になることがあり、原則として届出の期限もあります。</li>
+                    <li><b>だまされて、自分で送金した場合：</b> 銀行の不正払戻しの補償は、対象外となるのが基本です。残る手段は、振込先の口座の凍結と、そこにある残高から分配される被害回復分配金です。ただし、被害額の全額が戻る保証はなく、被害者が複数いれば残高を按分して支払われます。</li>
+                </ul>
+
+                <div class="highlight-quote">
+                    ディープフェイク詐欺は、本人の意思で「送金させる」詐欺です。<br>
+                    だからこそ、既存の補償の網から外れやすい。
+                </div>
+
+                <h2>保険は、どこまで効くのか</h2>
+                <p>個人向けには、ネットトラブルを補償する保険や、スマホの会員向けサービスもあります。ただし、補償の範囲は限られています。</p>
+
+                <ul>
+                    <li><b>上限は数万円〜200万円程度が目安：</b> たとえば、ある携帯会社のサービスでは、不正送金被害の補償は最大5万円、SNSなどで他人に損害を与えた場合の賠償補償は最大200万円です。</li>
+                    <li><b>対象は商品ごとに細かい：</b> 偽の通販サイトへの送金は対象でも、フィッシングで情報を盗まれた不正送金は対象外とする商品もあります。「ディープフェイクでだまされた送金」が対象かどうかは、約款の確認が必要です。</li>
+                    <li><b>生命保険・医療保険・個人賠償責任保険は、対象外：</b> 詐欺で失ったお金は、これらの補償の範囲ではありません。個人賠償責任保険は、自分が加害者になった場合の備えです。</li>
+                </ul>
+
+                <div class="concept-box">
+                    <strong>補償の「標準機能」と「オプション機能」</strong>
+                    銀行やカード会社が最初から付けている補償が「標準機能」で、個人向けの保険や補償サービスは、その外側を補う「オプション機能」にあたる。保険を探す前に、まず標準機能の中身と、届出の期限を確認することが先になる。
+                </div>
+
+                <h2>補償に頼る前に、「送金する前」の仕組みを持つ</h2>
+                <p>補償の網から外れやすい以上、いちばん効くのは、そもそも送金させない仕組みです。SNS型投資詐欺の被害額は、年々増加しています。「自分は大丈夫」は、もう通用しません。</p>
+
+                <ul>
+                    <li><b>「今すぐ」「誰にも言わないで」は、止まる合図：</b> 急かす、口止めする、不安をあおるのは、詐欺の典型的な手口です。そう言われたら、送金の手を止めます。</li>
+                    <li><b>投資の話は、「誰が勧めているか」ではなく「登録業者か」で判断する：</b> 著名人の動画や広告があっても、金融庁の登録業者一覧などで確認します。</li>
+                    <li><b>ネットバンキングの振込限度額を、必要最小限にする：</b> 万一のときの被害額に、上限をかけられます。</li>
+                    <li><b>送金する前に、第三者に相談する：</b> 家族のほか、警察相談専用電話（＃9110）や消費者ホットライン（188）にも相談できます。</li>
+                </ul>
+
+                <div class="highlight-quote">
+                    保険や補償で「戻す」ことを考える前に、<br>
+                    お金を「出す前」に止まる仕組みを持つ。<br>
+                </div>
+
+                <p>補償は、お金を失った「あと」の話です。顔や声まで偽装できる時代に、お金が出ていく前に止められるのは、送金ボタンを押す自分だけです。</p>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
