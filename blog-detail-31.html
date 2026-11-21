@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 一之瀬 律 Official Site</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW717RR90X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LW717RR90X');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/blog-common.css">
+    
+</head>
+
+<script src="blog-master.js" defer></script>
+
+<script>
+    // DOMContentLoadedイベントの中で実行することで、要素が存在することを保証します
+    window.addEventListener('DOMContentLoaded', () => {
+        const postData = BLOG_POSTS["post-31"]; 
+        
+        document.getElementById('post-date').innerText = postData.date;
+        document.getElementById('post-title').innerText = postData.title;
+        document.getElementById('post-subtitle').innerText = postData.subtitle;
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">RITSU ICHINOSE</a></div>
+            <nav>
+                <a href="index.html">TOP</a>
+                <a href="blog.html">BLOG LIST</a>
+            </nav>
+        </header>
+
+        <article>
+           <header class="entry-header">
+                <span id="post-date" class="entry-date"></span>
+                
+                <!-- タイトルとサブタイトルをdivで囲むとレイアウトが安定します -->
+                <div class="title-group">
+                    <h1 id="post-title" class="entry-title"></h1>
+                    <p id="post-subtitle" class="entry-subtitle"></p>
+                </div>
+            </header>
+            <div class="entry-content">
+                <p>先日も、第三者が利用者のアカウントに入り込み、その取引口座で不正な取引が行われる被害が報じられました。入り口は一つではありません。漏れたID・パスワードの悪用や、偽のログイン画面にだまされて認証情報を入力してしまうケースなど、手口はさまざまです。</p>
+                <p>自分のアカウントを他人に操作されたとき、お金は戻ってくるのでしょうか。結論から言うと、補償を左右するのは、被害額ではなく<b>「自分の守り方」</b>です。</p>
+
+                <h2>乗っ取られたら、お金は戻るのか</h2>
+                <p>アカウントの乗っ取りは、第三者が無断で操作する被害です。<a href="blog-detail-30.html">前回の記事</a>で整理したとおり、補償の対象になり得る側にあたります。ただし、「戻る」ことと「全額戻る」ことは別です。</p>
+
+                <ul>
+                    <li><b>銀行（ネットバンキング）：</b> 全国銀行協会の申し合わせで、利用者に過失がなければ全額を補償する方針です。ただし、過失があれば減額や対象外になります。銀行に知らせた日の30日前までの被害が、原則の対象です。</li>
+                    <li><b>クレジットカード：</b> 不正利用は補償の対象ですが、届出の期限は60日前後が目安です。</li>
+                    <li><b>証券会社：</b> 2025年に口座の乗っ取りが急増し、各社が補償の方針を公表しました。「取引前の状態に戻す（原状回復）」「被害額の50%」「個別に判断」など、会社と時期によって分かれています。</li>
+                </ul>
+
+                <h2>補償を左右する「3つの変数」</h2>
+
+                <div class="concept-box">
+                    <strong>補償は「固定の金額表」ではなく「変数」で決まる</strong>
+                    乗っ取りの補償は、保険のように金額が決まっているわけではなく、「どの会社か」「いつの被害か」「本人がどう守っていたか」という変数で変わる。証券会社の補償は、各社が自主的に公表した方針であり、法的な結論ではない。方針は今後も変わり得るため、自分が使う会社の最新の公表内容を確認しておきたい。
+                </div>
+
+                <ul>
+                    <li><b>どの会社か：</b> 同じ「50%補償」でも、何を「被害額」とするかが違います。元から持っていた株の不正売却を、算定の対象から外す会社もあれば、含める会社もあります。</li>
+                    <li><b>いつの被害か：</b> 同じ会社でも、認証の強化を境に、方針が変わることがあります。強化後の被害は、個別の事情を見て判断する会社が多くなっています。</li>
+                    <li><b>本人の設定や管理：</b> パスキーなどの設定状況によっては、補償の対象外になる場合があります。「一律100%の補償」とは限りません。</li>
+                </ul>
+
+                <p>たとえば「被害額の50%を補償する」という方針でも、元から持っていた株の不正売却を被害額に含めるかどうかで、計算の土台そのものが変わります。割合が同じでも、戻る金額が同じになるとは限らないのです。</p>
+
+                <div class="highlight-quote">
+                    同じ被害でも、会社・時期・守り方で、<br>
+                    戻る範囲は変わります。
+                </div>
+
+                <h2>自分の設定が、補償の「条件」になる</h2>
+                <p>個人向けの保険だけでは、乗っ取りの被害は埋めきれません。保険で対象になる事故や損害は契約で決まっているため、不正な売買による損失や、資産を取り戻すまでの影響までを広く埋めるものではないからです。金融機関の補償も会社の方針次第で変わるため、被害に遭わないための自己防衛が欠かせません。</p>
+
+                <ul>
+                    <li><b>パスキーや多要素認証を有効にする：</b> 対応している金融機関では、パスキーを優先します。SMSなどの認証だけでは、フィッシングやマルウェアで突破される手口もあります。</li>
+                    <li><b>パスワードを使い回さない：</b> 管理アプリを使い、サービスごとに別のものにします。</li>
+                    <li><b>ログインや取引の通知をオンにする：</b> 早く気づけば、届出の期限内に動けます。</li>
+                    <li><b>メールやSMSのリンクからログインしない：</b> 公式アプリか、ブックマークから入ります。</li>
+                </ul>
+
+                <h2>被害に気づいたら、期限との勝負になる</h2>
+                <p>もし身に覚えのないログインや取引に気づいたら、設定の見直しよりも先に、金融機関へ連絡してください。前述のとおり、銀行では「知らせた日の30日前まで」、クレジットカードでは「60日前後」といった期限が補償の目安になります。連絡が遅れるほど、対象になる範囲は狭くなりかねません。</p>
+
+                <ul>
+                    <li><b>まず金融機関に連絡し、不正な取引であることを伝える：</b> 口座やカードの利用停止が必要かどうかも、その場で確認します。</li>
+                    <li><b>安全な端末からパスワードを変更する：</b> 乗っ取られた可能性のある端末やネットワークからは操作しないようにします。</li>
+                    <li><b>ログイン・取引の通知や履歴を残しておく：</b> いつ、何に気づいたかが、後の確認を助けます。</li>
+                </ul>
+
+                <div class="highlight-quote">
+                    守りの設定は、資産を守るだけのものではありません。<br>
+                    万一のときに補償を受けるための、<b>「条件」</b>でもあります。
+                </div>
+            </div>
+
+            <footer class="article-footer">
+                <a href="blog.html" class="back-link">← BLOG LIST</a>
+                <div class="sns-share" style="font-size: 0.8rem; font-weight: bold; opacity: 0.7;">
+                    SHARE: <a href="https://x.com/Ritsu_Ichinose" style="margin-left:10px; color:inherit; text-decoration: none;">X</a> 
+                </div>
+            </footer>
+        </article>
+
+        <footer>
+            &copy; 2026 Ritsu Ichinose. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
